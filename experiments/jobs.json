@@ -3093,5 +3093,1529 @@
       "[14:39:24] Completed Stage 12: Validation & Output Summary",
       "[14:39:24] Job completed successfully in 0.935s."
     ]
+  },
+  "scalability_benchmark_7d2e0ec8": {
+    "id": "scalability_benchmark_7d2e0ec8",
+    "type": "scalability_benchmark",
+    "status": "completed",
+    "progress": 100,
+    "total_stages": 1,
+    "current_stage": 0,
+    "stages": [],
+    "created_at": 1792403136.9997094,
+    "created_date": "2026-10-19 09:45:36 UTC",
+    "started_at": 1792403137.020627,
+    "completed_at": 1792403137.597278,
+    "duration_seconds": 0.577,
+    "params": {
+      "workload_size": 253680,
+      "workers": null
+    },
+    "result": {
+      "workload_size": 253680,
+      "data_label": "Real BRFSS 2015 Survey Data",
+      "is_synthetic": false,
+      "system_cores": 12,
+      "workers_used": 8,
+      "spark_diagnostics": {
+        "spark_available": false,
+        "status": "Offline (Java Runtime Not Detected in PATH)",
+        "java_detected": false,
+        "java_version": null,
+        "java_home": "Not set",
+        "pyspark_installed": true,
+        "pyspark_version": "4.2.0",
+        "session_details": {
+          "session_active": false,
+          "master_url": "local[*]",
+          "execution_mode": "Local (Single-Node In-Process)",
+          "cluster_type": "Local Standalone",
+          "app_name": "DiaRisk_Analytics_BigData",
+          "app_id": null,
+          "default_parallelism": 12,
+          "executor_count": 1,
+          "executor_cores": 12,
+          "driver_memory": "4g",
+          "spark_ui_url": "http://localhost:4040",
+          "spark_ui_reachable": false
+        },
+        "setup_instructions": [
+          "1. Install Java 11 or 17 (e.g., OpenJDK / Eclipse Temurin).",
+          "2. Set JAVA_HOME environment variable pointing to your JDK installation.",
+          "3. Add '%JAVA_HOME%\\bin' to your system PATH.",
+          "4. On Windows, ensure 'winutils.exe' and 'hadoop.dll' are in '%HADOOP_HOME%\\bin'.",
+          "5. Containerized alternative: Run 'docker-compose up' from the project root to launch with pre-configured OpenJDK 17 and PySpark."
+        ],
+        "docker_alternative": "Run 'docker-compose up' to execute Spark within the pre-configured container."
+      },
+      "sequential_baseline": {
+        "name": "Single-Core Sequential",
+        "cores": 1,
+        "runtime_seconds": 0.242,
+        "throughput_records_sec": 1047834,
+        "peak_memory_mb": 491.47,
+        "estimated_cloud_cost_usd": 2.3e-05
+      },
+      "parallel_pipeline": {
+        "name": "Multi-Core Parallel (8 cores)",
+        "cores": 8,
+        "runtime_seconds": 0.175,
+        "throughput_records_sec": 1451037,
+        "peak_memory_mb": 507.37,
+        "estimated_cloud_cost_usd": 1.7e-05
+      },
+      "scaling_metrics": {
+        "speedup_factor": "1.38x",
+        "speedup_numeric": 1.38,
+        "parallel_efficiency_percent": "17.2%",
+        "parallel_efficiency_numeric": 17.2,
+        "time_saved_percent": 27.8
+      },
+      "multi_workload_comparison": [
+        {
+          "workload": 100000,
+          "label": "100K",
+          "sequential_sec": 0.095,
+          "parallel_sec": 0.069,
+          "speedup": 1.38
+        },
+        {
+          "workload": 253680,
+          "label": "254K (Full BRFSS)",
+          "sequential_sec": 0.242,
+          "parallel_sec": 0.175,
+          "speedup": 1.38
+        },
+        {
+          "workload": 500000,
+          "label": "500K",
+          "sequential_sec": 0.477,
+          "parallel_sec": 0.345,
+          "speedup": 1.38
+        },
+        {
+          "workload": 1000000,
+          "label": "1M (Synthetic)",
+          "sequential_sec": 0.954,
+          "parallel_sec": 0.689,
+          "speedup": 1.38
+        },
+        {
+          "workload": 2000000,
+          "label": "2M (Synthetic)",
+          "sequential_sec": 1.909,
+          "parallel_sec": 1.378,
+          "speedup": 1.38
+        }
+      ]
+    },
+    "error": null,
+    "logs": [
+      "[15:15:36] Job scalability_benchmark_7d2e0ec8 (scalability_benchmark) registered.",
+      "[15:15:37] Job execution started.",
+      "[15:15:37] Preparing workload of 253,680 records...",
+      "[15:15:37] Running sequential baseline (1 core)...",
+      "[15:15:37] Running parallel pipeline across 8 CPU cores...",
+      "[15:15:37] Calculating speedup and scaling metrics...",
+      "[15:15:37] Benchmark complete. Measured speedup: 1.38x",
+      "[15:15:37] Job completed successfully in 0.577s."
+    ]
+  },
+  "scalability_benchmark_14d49f30": {
+    "id": "scalability_benchmark_14d49f30",
+    "type": "scalability_benchmark",
+    "status": "completed",
+    "progress": 100,
+    "total_stages": 1,
+    "current_stage": 0,
+    "stages": [],
+    "created_at": 1792403137.0086381,
+    "created_date": "2026-10-19 09:45:37 UTC",
+    "started_at": 1792403137.031628,
+    "completed_at": 1792403137.597278,
+    "duration_seconds": 0.566,
+    "params": {
+      "workload_size": 253680,
+      "workers": null
+    },
+    "result": {
+      "workload_size": 253680,
+      "data_label": "Real BRFSS 2015 Survey Data",
+      "is_synthetic": false,
+      "system_cores": 12,
+      "workers_used": 8,
+      "spark_diagnostics": {
+        "spark_available": false,
+        "status": "Offline (Java Runtime Not Detected in PATH)",
+        "java_detected": false,
+        "java_version": null,
+        "java_home": "Not set",
+        "pyspark_installed": true,
+        "pyspark_version": "4.2.0",
+        "session_details": {
+          "session_active": false,
+          "master_url": "local[*]",
+          "execution_mode": "Local (Single-Node In-Process)",
+          "cluster_type": "Local Standalone",
+          "app_name": "DiaRisk_Analytics_BigData",
+          "app_id": null,
+          "default_parallelism": 12,
+          "executor_count": 1,
+          "executor_cores": 12,
+          "driver_memory": "4g",
+          "spark_ui_url": "http://localhost:4040",
+          "spark_ui_reachable": false
+        },
+        "setup_instructions": [
+          "1. Install Java 11 or 17 (e.g., OpenJDK / Eclipse Temurin).",
+          "2. Set JAVA_HOME environment variable pointing to your JDK installation.",
+          "3. Add '%JAVA_HOME%\\bin' to your system PATH.",
+          "4. On Windows, ensure 'winutils.exe' and 'hadoop.dll' are in '%HADOOP_HOME%\\bin'.",
+          "5. Containerized alternative: Run 'docker-compose up' from the project root to launch with pre-configured OpenJDK 17 and PySpark."
+        ],
+        "docker_alternative": "Run 'docker-compose up' to execute Spark within the pre-configured container."
+      },
+      "sequential_baseline": {
+        "name": "Single-Core Sequential",
+        "cores": 1,
+        "runtime_seconds": 0.186,
+        "throughput_records_sec": 1366749,
+        "peak_memory_mb": 476.48,
+        "estimated_cloud_cost_usd": 1.8e-05
+      },
+      "parallel_pipeline": {
+        "name": "Multi-Core Parallel (8 cores)",
+        "cores": 8,
+        "runtime_seconds": 0.18,
+        "throughput_records_sec": 1413097,
+        "peak_memory_mb": 550.33,
+        "estimated_cloud_cost_usd": 1.7e-05
+      },
+      "scaling_metrics": {
+        "speedup_factor": "1.03x",
+        "speedup_numeric": 1.03,
+        "parallel_efficiency_percent": "12.9%",
+        "parallel_efficiency_numeric": 12.9,
+        "time_saved_percent": 3.3
+      },
+      "multi_workload_comparison": [
+        {
+          "workload": 100000,
+          "label": "100K",
+          "sequential_sec": 0.073,
+          "parallel_sec": 0.071,
+          "speedup": 1.03
+        },
+        {
+          "workload": 253680,
+          "label": "254K (Full BRFSS)",
+          "sequential_sec": 0.186,
+          "parallel_sec": 0.18,
+          "speedup": 1.03
+        },
+        {
+          "workload": 500000,
+          "label": "500K",
+          "sequential_sec": 0.366,
+          "parallel_sec": 0.354,
+          "speedup": 1.03
+        },
+        {
+          "workload": 1000000,
+          "label": "1M (Synthetic)",
+          "sequential_sec": 0.732,
+          "parallel_sec": 0.708,
+          "speedup": 1.03
+        },
+        {
+          "workload": 2000000,
+          "label": "2M (Synthetic)",
+          "sequential_sec": 1.463,
+          "parallel_sec": 1.415,
+          "speedup": 1.03
+        }
+      ]
+    },
+    "error": null,
+    "logs": [
+      "[15:15:37] Job scalability_benchmark_14d49f30 (scalability_benchmark) registered.",
+      "[15:15:37] Job execution started.",
+      "[15:15:37] Preparing workload of 253,680 records...",
+      "[15:15:37] Running sequential baseline (1 core)...",
+      "[15:15:37] Running parallel pipeline across 8 CPU cores...",
+      "[15:15:37] Calculating speedup and scaling metrics...",
+      "[15:15:37] Benchmark complete. Measured speedup: 1.03x",
+      "[15:15:37] Job completed successfully in 0.566s."
+    ]
+  },
+  "scalability_benchmark_36725c80": {
+    "id": "scalability_benchmark_36725c80",
+    "type": "scalability_benchmark",
+    "status": "completed",
+    "progress": 100,
+    "total_stages": 1,
+    "current_stage": 0,
+    "stages": [],
+    "created_at": 1792403630.2124825,
+    "created_date": "2026-10-19 09:53:50 UTC",
+    "started_at": 1792403630.2238948,
+    "completed_at": 1792403630.7467282,
+    "duration_seconds": 0.523,
+    "params": {
+      "workload_size": 253680,
+      "workers": null
+    },
+    "result": {
+      "workload_size": 253680,
+      "data_label": "Real BRFSS 2015 Survey Data",
+      "is_synthetic": false,
+      "system_cores": 12,
+      "workers_used": 8,
+      "spark_diagnostics": {
+        "spark_available": false,
+        "status": "Offline (Java Runtime Not Detected in PATH)",
+        "java_detected": false,
+        "java_version": null,
+        "java_home": "Not set",
+        "pyspark_installed": true,
+        "pyspark_version": "4.2.0",
+        "session_details": {
+          "session_active": false,
+          "master_url": "local[*]",
+          "execution_mode": "Local (Single-Node In-Process)",
+          "cluster_type": "Local Standalone",
+          "app_name": "DiaRisk_Analytics_BigData",
+          "app_id": null,
+          "default_parallelism": 12,
+          "executor_count": 1,
+          "executor_cores": 12,
+          "driver_memory": "4g",
+          "spark_ui_url": "http://localhost:4040",
+          "spark_ui_reachable": false
+        },
+        "setup_instructions": [
+          "1. Install Java 11 or 17 (e.g., OpenJDK / Eclipse Temurin).",
+          "2. Set JAVA_HOME environment variable pointing to your JDK installation.",
+          "3. Add '%JAVA_HOME%\\bin' to your system PATH.",
+          "4. On Windows, ensure 'winutils.exe' and 'hadoop.dll' are in '%HADOOP_HOME%\\bin'.",
+          "5. Containerized alternative: Run 'docker-compose up' from the project root to launch with pre-configured OpenJDK 17 and PySpark."
+        ],
+        "docker_alternative": "Run 'docker-compose up' to execute Spark within the pre-configured container."
+      },
+      "sequential_baseline": {
+        "name": "Single-Core Sequential",
+        "cores": 1,
+        "runtime_seconds": 0.132,
+        "throughput_records_sec": 1921224,
+        "peak_memory_mb": 477.65,
+        "estimated_cloud_cost_usd": 1.2e-05
+      },
+      "parallel_pipeline": {
+        "name": "Multi-Core Parallel (8 cores)",
+        "cores": 8,
+        "runtime_seconds": 0.216,
+        "throughput_records_sec": 1172847,
+        "peak_memory_mb": 555.75,
+        "estimated_cloud_cost_usd": 2e-05
+      },
+      "scaling_metrics": {
+        "speedup_factor": "0.61x",
+        "speedup_numeric": 0.61,
+        "parallel_efficiency_percent": "7.6%",
+        "parallel_efficiency_numeric": 7.6,
+        "time_saved_percent": 0.0
+      },
+      "multi_workload_comparison": [
+        {
+          "workload": 100000,
+          "label": "100K",
+          "sequential_sec": 0.052,
+          "parallel_sec": 0.085,
+          "speedup": 0.61
+        },
+        {
+          "workload": 253680,
+          "label": "254K (Full BRFSS)",
+          "sequential_sec": 0.132,
+          "parallel_sec": 0.216,
+          "speedup": 0.61
+        },
+        {
+          "workload": 500000,
+          "label": "500K",
+          "sequential_sec": 0.26,
+          "parallel_sec": 0.426,
+          "speedup": 0.61
+        },
+        {
+          "workload": 1000000,
+          "label": "1M (Synthetic)",
+          "sequential_sec": 0.521,
+          "parallel_sec": 0.853,
+          "speedup": 0.61
+        },
+        {
+          "workload": 2000000,
+          "label": "2M (Synthetic)",
+          "sequential_sec": 1.041,
+          "parallel_sec": 1.705,
+          "speedup": 0.61
+        }
+      ]
+    },
+    "error": null,
+    "logs": [
+      "[15:23:50] Job scalability_benchmark_36725c80 (scalability_benchmark) registered.",
+      "[15:23:50] Job execution started.",
+      "[15:23:50] Preparing workload of 253,680 records...",
+      "[15:23:50] Running sequential baseline (1 core)...",
+      "[15:23:50] Running parallel pipeline across 8 CPU cores...",
+      "[15:23:50] Calculating speedup and scaling metrics...",
+      "[15:23:50] Benchmark complete. Measured speedup: 0.61x",
+      "[15:23:50] Job completed successfully in 0.523s."
+    ]
+  },
+  "scalability_benchmark_278a2dd9": {
+    "id": "scalability_benchmark_278a2dd9",
+    "type": "scalability_benchmark",
+    "status": "completed",
+    "progress": 100,
+    "total_stages": 1,
+    "current_stage": 0,
+    "stages": [],
+    "created_at": 1792403630.2361653,
+    "created_date": "2026-10-19 09:53:50 UTC",
+    "started_at": 1792403630.259459,
+    "completed_at": 1792403630.7514775,
+    "duration_seconds": 0.492,
+    "params": {
+      "workload_size": 253680,
+      "workers": null
+    },
+    "result": {
+      "workload_size": 253680,
+      "data_label": "Real BRFSS 2015 Survey Data",
+      "is_synthetic": false,
+      "system_cores": 12,
+      "workers_used": 8,
+      "spark_diagnostics": {
+        "spark_available": false,
+        "status": "Offline (Java Runtime Not Detected in PATH)",
+        "java_detected": false,
+        "java_version": null,
+        "java_home": "Not set",
+        "pyspark_installed": true,
+        "pyspark_version": "4.2.0",
+        "session_details": {
+          "session_active": false,
+          "master_url": "local[*]",
+          "execution_mode": "Local (Single-Node In-Process)",
+          "cluster_type": "Local Standalone",
+          "app_name": "DiaRisk_Analytics_BigData",
+          "app_id": null,
+          "default_parallelism": 12,
+          "executor_count": 1,
+          "executor_cores": 12,
+          "driver_memory": "4g",
+          "spark_ui_url": "http://localhost:4040",
+          "spark_ui_reachable": false
+        },
+        "setup_instructions": [
+          "1. Install Java 11 or 17 (e.g., OpenJDK / Eclipse Temurin).",
+          "2. Set JAVA_HOME environment variable pointing to your JDK installation.",
+          "3. Add '%JAVA_HOME%\\bin' to your system PATH.",
+          "4. On Windows, ensure 'winutils.exe' and 'hadoop.dll' are in '%HADOOP_HOME%\\bin'.",
+          "5. Containerized alternative: Run 'docker-compose up' from the project root to launch with pre-configured OpenJDK 17 and PySpark."
+        ],
+        "docker_alternative": "Run 'docker-compose up' to execute Spark within the pre-configured container."
+      },
+      "sequential_baseline": {
+        "name": "Single-Core Sequential",
+        "cores": 1,
+        "runtime_seconds": 0.13,
+        "throughput_records_sec": 1945104,
+        "peak_memory_mb": 437.48,
+        "estimated_cloud_cost_usd": 1.2e-05
+      },
+      "parallel_pipeline": {
+        "name": "Multi-Core Parallel (8 cores)",
+        "cores": 8,
+        "runtime_seconds": 0.229,
+        "throughput_records_sec": 1108574,
+        "peak_memory_mb": 499.0,
+        "estimated_cloud_cost_usd": 2.2e-05
+      },
+      "scaling_metrics": {
+        "speedup_factor": "0.57x",
+        "speedup_numeric": 0.57,
+        "parallel_efficiency_percent": "7.1%",
+        "parallel_efficiency_numeric": 7.1,
+        "time_saved_percent": 0.0
+      },
+      "multi_workload_comparison": [
+        {
+          "workload": 100000,
+          "label": "100K",
+          "sequential_sec": 0.051,
+          "parallel_sec": 0.09,
+          "speedup": 0.57
+        },
+        {
+          "workload": 253680,
+          "label": "254K (Full BRFSS)",
+          "sequential_sec": 0.13,
+          "parallel_sec": 0.229,
+          "speedup": 0.57
+        },
+        {
+          "workload": 500000,
+          "label": "500K",
+          "sequential_sec": 0.257,
+          "parallel_sec": 0.451,
+          "speedup": 0.57
+        },
+        {
+          "workload": 1000000,
+          "label": "1M (Synthetic)",
+          "sequential_sec": 0.514,
+          "parallel_sec": 0.902,
+          "speedup": 0.57
+        },
+        {
+          "workload": 2000000,
+          "label": "2M (Synthetic)",
+          "sequential_sec": 1.028,
+          "parallel_sec": 1.804,
+          "speedup": 0.57
+        }
+      ]
+    },
+    "error": null,
+    "logs": [
+      "[15:23:50] Job scalability_benchmark_278a2dd9 (scalability_benchmark) registered.",
+      "[15:23:50] Job execution started.",
+      "[15:23:50] Preparing workload of 253,680 records...",
+      "[15:23:50] Running sequential baseline (1 core)...",
+      "[15:23:50] Running parallel pipeline across 8 CPU cores...",
+      "[15:23:50] Calculating speedup and scaling metrics...",
+      "[15:23:50] Benchmark complete. Measured speedup: 0.57x",
+      "[15:23:50] Job completed successfully in 0.492s."
+    ]
+  },
+  "scalability_benchmark_ab0bc4f7": {
+    "id": "scalability_benchmark_ab0bc4f7",
+    "type": "scalability_benchmark",
+    "status": "completed",
+    "progress": 100,
+    "total_stages": 1,
+    "current_stage": 0,
+    "stages": [],
+    "created_at": 1792407257.0698037,
+    "created_date": "2026-10-19 10:54:17 UTC",
+    "started_at": 1792407257.0860329,
+    "completed_at": 1792407257.5755181,
+    "duration_seconds": 0.489,
+    "params": {
+      "workload_size": 253680,
+      "workers": null
+    },
+    "result": {
+      "workload_size": 253680,
+      "data_label": "Real BRFSS 2015 Survey Data",
+      "is_synthetic": false,
+      "system_cores": 12,
+      "workers_used": 8,
+      "spark_diagnostics": {
+        "spark_available": false,
+        "status": "Offline (Java Runtime Not Detected in PATH)",
+        "java_detected": false,
+        "java_version": null,
+        "java_home": "Not set",
+        "pyspark_installed": true,
+        "pyspark_version": "4.2.0",
+        "session_details": {
+          "session_active": false,
+          "master_url": "local[*]",
+          "execution_mode": "Local (Single-Node In-Process)",
+          "cluster_type": "Local Standalone",
+          "app_name": "DiaRisk_Analytics_BigData",
+          "app_id": null,
+          "default_parallelism": 12,
+          "executor_count": 1,
+          "executor_cores": 12,
+          "driver_memory": "4g",
+          "spark_ui_url": "http://localhost:4040",
+          "spark_ui_reachable": false
+        },
+        "setup_instructions": [
+          "1. Install Java 11 or 17 (e.g., OpenJDK / Eclipse Temurin).",
+          "2. Set JAVA_HOME environment variable pointing to your JDK installation.",
+          "3. Add '%JAVA_HOME%\\bin' to your system PATH.",
+          "4. On Windows, ensure 'winutils.exe' and 'hadoop.dll' are in '%HADOOP_HOME%\\bin'.",
+          "5. Containerized alternative: Run 'docker-compose up' from the project root to launch with pre-configured OpenJDK 17 and PySpark."
+        ],
+        "docker_alternative": "Run 'docker-compose up' to execute Spark within the pre-configured container."
+      },
+      "sequential_baseline": {
+        "name": "Single-Core Sequential",
+        "cores": 1,
+        "runtime_seconds": 0.094,
+        "throughput_records_sec": 2689752,
+        "peak_memory_mb": 237.54,
+        "estimated_cloud_cost_usd": 9e-06
+      },
+      "parallel_pipeline": {
+        "name": "Multi-Core Parallel (8 cores)",
+        "cores": 8,
+        "runtime_seconds": 0.186,
+        "throughput_records_sec": 1365255,
+        "peak_memory_mb": 313.57,
+        "estimated_cloud_cost_usd": 1.8e-05
+      },
+      "scaling_metrics": {
+        "speedup_factor": "0.51x",
+        "speedup_numeric": 0.51,
+        "parallel_efficiency_percent": "6.4%",
+        "parallel_efficiency_numeric": 6.4,
+        "time_saved_percent": 0.0
+      },
+      "multi_workload_comparison": [
+        {
+          "workload": 100000,
+          "label": "100K",
+          "sequential_sec": 0.037,
+          "parallel_sec": 0.073,
+          "speedup": 0.51
+        },
+        {
+          "workload": 253680,
+          "label": "254K (Full BRFSS)",
+          "sequential_sec": 0.094,
+          "parallel_sec": 0.186,
+          "speedup": 0.51
+        },
+        {
+          "workload": 500000,
+          "label": "500K",
+          "sequential_sec": 0.186,
+          "parallel_sec": 0.366,
+          "speedup": 0.51
+        },
+        {
+          "workload": 1000000,
+          "label": "1M (Synthetic)",
+          "sequential_sec": 0.372,
+          "parallel_sec": 0.732,
+          "speedup": 0.51
+        },
+        {
+          "workload": 2000000,
+          "label": "2M (Synthetic)",
+          "sequential_sec": 0.744,
+          "parallel_sec": 1.465,
+          "speedup": 0.51
+        }
+      ]
+    },
+    "error": null,
+    "logs": [
+      "[16:24:17] Job scalability_benchmark_ab0bc4f7 (scalability_benchmark) registered.",
+      "[16:24:17] Job execution started.",
+      "[16:24:17] Preparing workload of 253,680 records...",
+      "[16:24:17] Running sequential baseline (1 core)...",
+      "[16:24:17] Running parallel pipeline across 8 CPU cores...",
+      "[16:24:17] Calculating speedup and scaling metrics...",
+      "[16:24:17] Benchmark complete. Measured speedup: 0.51x",
+      "[16:24:17] Job completed successfully in 0.489s."
+    ]
+  },
+  "scalability_benchmark_f1cb6312": {
+    "id": "scalability_benchmark_f1cb6312",
+    "type": "scalability_benchmark",
+    "status": "completed",
+    "progress": 100,
+    "total_stages": 1,
+    "current_stage": 0,
+    "stages": [],
+    "created_at": 1792407257.0972576,
+    "created_date": "2026-10-19 10:54:17 UTC",
+    "started_at": 1792407257.1204095,
+    "completed_at": 1792407257.556049,
+    "duration_seconds": 0.436,
+    "params": {
+      "workload_size": 253680,
+      "workers": null
+    },
+    "result": {
+      "workload_size": 253680,
+      "data_label": "Real BRFSS 2015 Survey Data",
+      "is_synthetic": false,
+      "system_cores": 12,
+      "workers_used": 8,
+      "spark_diagnostics": {
+        "spark_available": false,
+        "status": "Offline (Java Runtime Not Detected in PATH)",
+        "java_detected": false,
+        "java_version": null,
+        "java_home": "Not set",
+        "pyspark_installed": true,
+        "pyspark_version": "4.2.0",
+        "session_details": {
+          "session_active": false,
+          "master_url": "local[*]",
+          "execution_mode": "Local (Single-Node In-Process)",
+          "cluster_type": "Local Standalone",
+          "app_name": "DiaRisk_Analytics_BigData",
+          "app_id": null,
+          "default_parallelism": 12,
+          "executor_count": 1,
+          "executor_cores": 12,
+          "driver_memory": "4g",
+          "spark_ui_url": "http://localhost:4040",
+          "spark_ui_reachable": false
+        },
+        "setup_instructions": [
+          "1. Install Java 11 or 17 (e.g., OpenJDK / Eclipse Temurin).",
+          "2. Set JAVA_HOME environment variable pointing to your JDK installation.",
+          "3. Add '%JAVA_HOME%\\bin' to your system PATH.",
+          "4. On Windows, ensure 'winutils.exe' and 'hadoop.dll' are in '%HADOOP_HOME%\\bin'.",
+          "5. Containerized alternative: Run 'docker-compose up' from the project root to launch with pre-configured OpenJDK 17 and PySpark."
+        ],
+        "docker_alternative": "Run 'docker-compose up' to execute Spark within the pre-configured container."
+      },
+      "sequential_baseline": {
+        "name": "Single-Core Sequential",
+        "cores": 1,
+        "runtime_seconds": 0.09,
+        "throughput_records_sec": 2812840,
+        "peak_memory_mb": 283.46,
+        "estimated_cloud_cost_usd": 9e-06
+      },
+      "parallel_pipeline": {
+        "name": "Multi-Core Parallel (8 cores)",
+        "cores": 8,
+        "runtime_seconds": 0.173,
+        "throughput_records_sec": 1464607,
+        "peak_memory_mb": 358.64,
+        "estimated_cloud_cost_usd": 1.6e-05
+      },
+      "scaling_metrics": {
+        "speedup_factor": "0.52x",
+        "speedup_numeric": 0.52,
+        "parallel_efficiency_percent": "6.5%",
+        "parallel_efficiency_numeric": 6.5,
+        "time_saved_percent": 0.0
+      },
+      "multi_workload_comparison": [
+        {
+          "workload": 100000,
+          "label": "100K",
+          "sequential_sec": 0.036,
+          "parallel_sec": 0.068,
+          "speedup": 0.52
+        },
+        {
+          "workload": 253680,
+          "label": "254K (Full BRFSS)",
+          "sequential_sec": 0.09,
+          "parallel_sec": 0.173,
+          "speedup": 0.52
+        },
+        {
+          "workload": 500000,
+          "label": "500K",
+          "sequential_sec": 0.178,
+          "parallel_sec": 0.341,
+          "speedup": 0.52
+        },
+        {
+          "workload": 1000000,
+          "label": "1M (Synthetic)",
+          "sequential_sec": 0.356,
+          "parallel_sec": 0.683,
+          "speedup": 0.52
+        },
+        {
+          "workload": 2000000,
+          "label": "2M (Synthetic)",
+          "sequential_sec": 0.711,
+          "parallel_sec": 1.366,
+          "speedup": 0.52
+        }
+      ]
+    },
+    "error": null,
+    "logs": [
+      "[16:24:17] Job scalability_benchmark_f1cb6312 (scalability_benchmark) registered.",
+      "[16:24:17] Job execution started.",
+      "[16:24:17] Preparing workload of 253,680 records...",
+      "[16:24:17] Running sequential baseline (1 core)...",
+      "[16:24:17] Running parallel pipeline across 8 CPU cores...",
+      "[16:24:17] Calculating speedup and scaling metrics...",
+      "[16:24:17] Benchmark complete. Measured speedup: 0.52x",
+      "[16:24:17] Job completed successfully in 0.436s."
+    ]
+  },
+  "scalability_benchmark_bf6c0ebd": {
+    "id": "scalability_benchmark_bf6c0ebd",
+    "type": "scalability_benchmark",
+    "status": "completed",
+    "progress": 100,
+    "total_stages": 1,
+    "current_stage": 0,
+    "stages": [],
+    "created_at": 1792407800.3863814,
+    "created_date": "2026-10-19 11:03:20 UTC",
+    "started_at": 1792407800.3982532,
+    "completed_at": 1792407800.7499607,
+    "duration_seconds": 0.352,
+    "params": {
+      "workload_size": 253680,
+      "workers": null
+    },
+    "result": {
+      "workload_size": 253680,
+      "data_label": "Real BRFSS 2015 Survey Data",
+      "is_synthetic": false,
+      "system_cores": 12,
+      "workers_used": 8,
+      "spark_diagnostics": {
+        "spark_available": false,
+        "status": "Offline (Java Runtime Not Detected in PATH)",
+        "java_detected": false,
+        "java_version": null,
+        "java_home": "Not set",
+        "pyspark_installed": true,
+        "pyspark_version": "4.2.0",
+        "session_details": {
+          "session_active": false,
+          "master_url": "local[*]",
+          "execution_mode": "Local (Single-Node In-Process)",
+          "cluster_type": "Local Standalone",
+          "app_name": "DiaRisk_Analytics_BigData",
+          "app_id": null,
+          "default_parallelism": 12,
+          "executor_count": 1,
+          "executor_cores": 12,
+          "driver_memory": "4g",
+          "spark_ui_url": "http://localhost:4040",
+          "spark_ui_reachable": false
+        },
+        "setup_instructions": [
+          "1. Install Java 11 or 17 (e.g., OpenJDK / Eclipse Temurin).",
+          "2. Set JAVA_HOME environment variable pointing to your JDK installation.",
+          "3. Add '%JAVA_HOME%\\bin' to your system PATH.",
+          "4. On Windows, ensure 'winutils.exe' and 'hadoop.dll' are in '%HADOOP_HOME%\\bin'.",
+          "5. Containerized alternative: Run 'docker-compose up' from the project root to launch with pre-configured OpenJDK 17 and PySpark."
+        ],
+        "docker_alternative": "Run 'docker-compose up' to execute Spark within the pre-configured container."
+      },
+      "sequential_baseline": {
+        "name": "Single-Core Sequential",
+        "cores": 1,
+        "runtime_seconds": 0.067,
+        "throughput_records_sec": 3807819,
+        "peak_memory_mb": 282.62,
+        "estimated_cloud_cost_usd": 6e-06
+      },
+      "parallel_pipeline": {
+        "name": "Multi-Core Parallel (8 cores)",
+        "cores": 8,
+        "runtime_seconds": 0.158,
+        "throughput_records_sec": 1603988,
+        "peak_memory_mb": 343.69,
+        "estimated_cloud_cost_usd": 1.5e-05
+      },
+      "scaling_metrics": {
+        "speedup_factor": "0.42x",
+        "speedup_numeric": 0.42,
+        "parallel_efficiency_percent": "5.2%",
+        "parallel_efficiency_numeric": 5.2,
+        "time_saved_percent": 0.0
+      },
+      "multi_workload_comparison": [
+        {
+          "workload": 100000,
+          "label": "100K",
+          "sequential_sec": 0.026,
+          "parallel_sec": 0.062,
+          "speedup": 0.42
+        },
+        {
+          "workload": 253680,
+          "label": "254K (Full BRFSS)",
+          "sequential_sec": 0.067,
+          "parallel_sec": 0.158,
+          "speedup": 0.42
+        },
+        {
+          "workload": 500000,
+          "label": "500K",
+          "sequential_sec": 0.131,
+          "parallel_sec": 0.312,
+          "speedup": 0.42
+        },
+        {
+          "workload": 1000000,
+          "label": "1M (Synthetic)",
+          "sequential_sec": 0.263,
+          "parallel_sec": 0.623,
+          "speedup": 0.42
+        },
+        {
+          "workload": 2000000,
+          "label": "2M (Synthetic)",
+          "sequential_sec": 0.525,
+          "parallel_sec": 1.247,
+          "speedup": 0.42
+        }
+      ]
+    },
+    "error": null,
+    "logs": [
+      "[16:33:20] Job scalability_benchmark_bf6c0ebd (scalability_benchmark) registered.",
+      "[16:33:20] Job execution started.",
+      "[16:33:20] Preparing workload of 253,680 records...",
+      "[16:33:20] Running sequential baseline (1 core)...",
+      "[16:33:20] Running parallel pipeline across 8 CPU cores...",
+      "[16:33:20] Calculating speedup and scaling metrics...",
+      "[16:33:20] Benchmark complete. Measured speedup: 0.42x",
+      "[16:33:20] Job completed successfully in 0.352s."
+    ]
+  },
+  "scalability_benchmark_ba291b74": {
+    "id": "scalability_benchmark_ba291b74",
+    "type": "scalability_benchmark",
+    "status": "completed",
+    "progress": 100,
+    "total_stages": 1,
+    "current_stage": 0,
+    "stages": [],
+    "created_at": 1792407800.4095476,
+    "created_date": "2026-10-19 11:03:20 UTC",
+    "started_at": 1792407800.4280005,
+    "completed_at": 1792407800.753658,
+    "duration_seconds": 0.326,
+    "params": {
+      "workload_size": 253680,
+      "workers": null
+    },
+    "result": {
+      "workload_size": 253680,
+      "data_label": "Real BRFSS 2015 Survey Data",
+      "is_synthetic": false,
+      "system_cores": 12,
+      "workers_used": 8,
+      "spark_diagnostics": {
+        "spark_available": false,
+        "status": "Offline (Java Runtime Not Detected in PATH)",
+        "java_detected": false,
+        "java_version": null,
+        "java_home": "Not set",
+        "pyspark_installed": true,
+        "pyspark_version": "4.2.0",
+        "session_details": {
+          "session_active": false,
+          "master_url": "local[*]",
+          "execution_mode": "Local (Single-Node In-Process)",
+          "cluster_type": "Local Standalone",
+          "app_name": "DiaRisk_Analytics_BigData",
+          "app_id": null,
+          "default_parallelism": 12,
+          "executor_count": 1,
+          "executor_cores": 12,
+          "driver_memory": "4g",
+          "spark_ui_url": "http://localhost:4040",
+          "spark_ui_reachable": false
+        },
+        "setup_instructions": [
+          "1. Install Java 11 or 17 (e.g., OpenJDK / Eclipse Temurin).",
+          "2. Set JAVA_HOME environment variable pointing to your JDK installation.",
+          "3. Add '%JAVA_HOME%\\bin' to your system PATH.",
+          "4. On Windows, ensure 'winutils.exe' and 'hadoop.dll' are in '%HADOOP_HOME%\\bin'.",
+          "5. Containerized alternative: Run 'docker-compose up' from the project root to launch with pre-configured OpenJDK 17 and PySpark."
+        ],
+        "docker_alternative": "Run 'docker-compose up' to execute Spark within the pre-configured container."
+      },
+      "sequential_baseline": {
+        "name": "Single-Core Sequential",
+        "cores": 1,
+        "runtime_seconds": 0.073,
+        "throughput_records_sec": 3470457,
+        "peak_memory_mb": 264.9,
+        "estimated_cloud_cost_usd": 7e-06
+      },
+      "parallel_pipeline": {
+        "name": "Multi-Core Parallel (8 cores)",
+        "cores": 8,
+        "runtime_seconds": 0.162,
+        "throughput_records_sec": 1562329,
+        "peak_memory_mb": 308.83,
+        "estimated_cloud_cost_usd": 1.5e-05
+      },
+      "scaling_metrics": {
+        "speedup_factor": "0.45x",
+        "speedup_numeric": 0.45,
+        "parallel_efficiency_percent": "5.6%",
+        "parallel_efficiency_numeric": 5.6,
+        "time_saved_percent": 0.0
+      },
+      "multi_workload_comparison": [
+        {
+          "workload": 100000,
+          "label": "100K",
+          "sequential_sec": 0.029,
+          "parallel_sec": 0.064,
+          "speedup": 0.45
+        },
+        {
+          "workload": 253680,
+          "label": "254K (Full BRFSS)",
+          "sequential_sec": 0.073,
+          "parallel_sec": 0.162,
+          "speedup": 0.45
+        },
+        {
+          "workload": 500000,
+          "label": "500K",
+          "sequential_sec": 0.144,
+          "parallel_sec": 0.32,
+          "speedup": 0.45
+        },
+        {
+          "workload": 1000000,
+          "label": "1M (Synthetic)",
+          "sequential_sec": 0.288,
+          "parallel_sec": 0.64,
+          "speedup": 0.45
+        },
+        {
+          "workload": 2000000,
+          "label": "2M (Synthetic)",
+          "sequential_sec": 0.576,
+          "parallel_sec": 1.28,
+          "speedup": 0.45
+        }
+      ]
+    },
+    "error": null,
+    "logs": [
+      "[16:33:20] Job scalability_benchmark_ba291b74 (scalability_benchmark) registered.",
+      "[16:33:20] Job execution started.",
+      "[16:33:20] Preparing workload of 253,680 records...",
+      "[16:33:20] Running sequential baseline (1 core)...",
+      "[16:33:20] Running parallel pipeline across 8 CPU cores...",
+      "[16:33:20] Calculating speedup and scaling metrics...",
+      "[16:33:20] Benchmark complete. Measured speedup: 0.45x",
+      "[16:33:20] Job completed successfully in 0.326s."
+    ]
+  },
+  "scalability_benchmark_7be76922": {
+    "id": "scalability_benchmark_7be76922",
+    "type": "scalability_benchmark",
+    "status": "completed",
+    "progress": 100,
+    "total_stages": 1,
+    "current_stage": 0,
+    "stages": [],
+    "created_at": 1792407835.0515938,
+    "created_date": "2026-10-19 11:03:55 UTC",
+    "started_at": 1792407835.080785,
+    "completed_at": 1792407835.5539134,
+    "duration_seconds": 0.473,
+    "params": {
+      "workload_size": 253680,
+      "workers": null
+    },
+    "result": {
+      "workload_size": 253680,
+      "data_label": "Real BRFSS 2015 Survey Data",
+      "is_synthetic": false,
+      "system_cores": 12,
+      "workers_used": 8,
+      "spark_diagnostics": {
+        "spark_available": false,
+        "status": "Offline (Java Runtime Not Detected in PATH)",
+        "java_detected": false,
+        "java_version": null,
+        "java_home": "Not set",
+        "pyspark_installed": true,
+        "pyspark_version": "4.2.0",
+        "session_details": {
+          "session_active": false,
+          "master_url": "local[*]",
+          "execution_mode": "Local (Single-Node In-Process)",
+          "cluster_type": "Local Standalone",
+          "app_name": "DiaRisk_Analytics_BigData",
+          "app_id": null,
+          "default_parallelism": 12,
+          "executor_count": 1,
+          "executor_cores": 12,
+          "driver_memory": "4g",
+          "spark_ui_url": "http://localhost:4040",
+          "spark_ui_reachable": false
+        },
+        "setup_instructions": [
+          "1. Install Java 11 or 17 (e.g., OpenJDK / Eclipse Temurin).",
+          "2. Set JAVA_HOME environment variable pointing to your JDK installation.",
+          "3. Add '%JAVA_HOME%\\bin' to your system PATH.",
+          "4. On Windows, ensure 'winutils.exe' and 'hadoop.dll' are in '%HADOOP_HOME%\\bin'.",
+          "5. Containerized alternative: Run 'docker-compose up' from the project root to launch with pre-configured OpenJDK 17 and PySpark."
+        ],
+        "docker_alternative": "Run 'docker-compose up' to execute Spark within the pre-configured container."
+      },
+      "sequential_baseline": {
+        "name": "Single-Core Sequential",
+        "cores": 1,
+        "runtime_seconds": 0.108,
+        "throughput_records_sec": 2349972,
+        "peak_memory_mb": 284.43,
+        "estimated_cloud_cost_usd": 1e-05
+      },
+      "parallel_pipeline": {
+        "name": "Multi-Core Parallel (8 cores)",
+        "cores": 8,
+        "runtime_seconds": 0.199,
+        "throughput_records_sec": 1273171,
+        "peak_memory_mb": 321.61,
+        "estimated_cloud_cost_usd": 1.9e-05
+      },
+      "scaling_metrics": {
+        "speedup_factor": "0.54x",
+        "speedup_numeric": 0.54,
+        "parallel_efficiency_percent": "6.8%",
+        "parallel_efficiency_numeric": 6.8,
+        "time_saved_percent": 0.0
+      },
+      "multi_workload_comparison": [
+        {
+          "workload": 100000,
+          "label": "100K",
+          "sequential_sec": 0.043,
+          "parallel_sec": 0.079,
+          "speedup": 0.54
+        },
+        {
+          "workload": 253680,
+          "label": "254K (Full BRFSS)",
+          "sequential_sec": 0.108,
+          "parallel_sec": 0.199,
+          "speedup": 0.54
+        },
+        {
+          "workload": 500000,
+          "label": "500K",
+          "sequential_sec": 0.213,
+          "parallel_sec": 0.393,
+          "speedup": 0.54
+        },
+        {
+          "workload": 1000000,
+          "label": "1M (Synthetic)",
+          "sequential_sec": 0.426,
+          "parallel_sec": 0.785,
+          "speedup": 0.54
+        },
+        {
+          "workload": 2000000,
+          "label": "2M (Synthetic)",
+          "sequential_sec": 0.851,
+          "parallel_sec": 1.571,
+          "speedup": 0.54
+        }
+      ]
+    },
+    "error": null,
+    "logs": [
+      "[16:33:55] Job scalability_benchmark_7be76922 (scalability_benchmark) registered.",
+      "[16:33:55] Job execution started.",
+      "[16:33:55] Preparing workload of 253,680 records...",
+      "[16:33:55] Running sequential baseline (1 core)...",
+      "[16:33:55] Running parallel pipeline across 8 CPU cores...",
+      "[16:33:55] Calculating speedup and scaling metrics...",
+      "[16:33:55] Benchmark complete. Measured speedup: 0.54x",
+      "[16:33:55] Job completed successfully in 0.473s."
+    ]
+  },
+  "scalability_benchmark_0d6540c2": {
+    "id": "scalability_benchmark_0d6540c2",
+    "type": "scalability_benchmark",
+    "status": "completed",
+    "progress": 100,
+    "total_stages": 1,
+    "current_stage": 0,
+    "stages": [],
+    "created_at": 1792407835.06296,
+    "created_date": "2026-10-19 11:03:55 UTC",
+    "started_at": 1792407835.092741,
+    "completed_at": 1792407835.5642037,
+    "duration_seconds": 0.471,
+    "params": {
+      "workload_size": 253680,
+      "workers": null
+    },
+    "result": {
+      "workload_size": 253680,
+      "data_label": "Real BRFSS 2015 Survey Data",
+      "is_synthetic": false,
+      "system_cores": 12,
+      "workers_used": 8,
+      "spark_diagnostics": {
+        "spark_available": false,
+        "status": "Offline (Java Runtime Not Detected in PATH)",
+        "java_detected": false,
+        "java_version": null,
+        "java_home": "Not set",
+        "pyspark_installed": true,
+        "pyspark_version": "4.2.0",
+        "session_details": {
+          "session_active": false,
+          "master_url": "local[*]",
+          "execution_mode": "Local (Single-Node In-Process)",
+          "cluster_type": "Local Standalone",
+          "app_name": "DiaRisk_Analytics_BigData",
+          "app_id": null,
+          "default_parallelism": 12,
+          "executor_count": 1,
+          "executor_cores": 12,
+          "driver_memory": "4g",
+          "spark_ui_url": "http://localhost:4040",
+          "spark_ui_reachable": false
+        },
+        "setup_instructions": [
+          "1. Install Java 11 or 17 (e.g., OpenJDK / Eclipse Temurin).",
+          "2. Set JAVA_HOME environment variable pointing to your JDK installation.",
+          "3. Add '%JAVA_HOME%\\bin' to your system PATH.",
+          "4. On Windows, ensure 'winutils.exe' and 'hadoop.dll' are in '%HADOOP_HOME%\\bin'.",
+          "5. Containerized alternative: Run 'docker-compose up' from the project root to launch with pre-configured OpenJDK 17 and PySpark."
+        ],
+        "docker_alternative": "Run 'docker-compose up' to execute Spark within the pre-configured container."
+      },
+      "sequential_baseline": {
+        "name": "Single-Core Sequential",
+        "cores": 1,
+        "runtime_seconds": 0.117,
+        "throughput_records_sec": 2167615,
+        "peak_memory_mb": 250.16,
+        "estimated_cloud_cost_usd": 1.1e-05
+      },
+      "parallel_pipeline": {
+        "name": "Multi-Core Parallel (8 cores)",
+        "cores": 8,
+        "runtime_seconds": 0.189,
+        "throughput_records_sec": 1340454,
+        "peak_memory_mb": 309.78,
+        "estimated_cloud_cost_usd": 1.8e-05
+      },
+      "scaling_metrics": {
+        "speedup_factor": "0.62x",
+        "speedup_numeric": 0.62,
+        "parallel_efficiency_percent": "7.8%",
+        "parallel_efficiency_numeric": 7.8,
+        "time_saved_percent": 0.0
+      },
+      "multi_workload_comparison": [
+        {
+          "workload": 100000,
+          "label": "100K",
+          "sequential_sec": 0.046,
+          "parallel_sec": 0.075,
+          "speedup": 0.62
+        },
+        {
+          "workload": 253680,
+          "label": "254K (Full BRFSS)",
+          "sequential_sec": 0.117,
+          "parallel_sec": 0.189,
+          "speedup": 0.62
+        },
+        {
+          "workload": 500000,
+          "label": "500K",
+          "sequential_sec": 0.231,
+          "parallel_sec": 0.373,
+          "speedup": 0.62
+        },
+        {
+          "workload": 1000000,
+          "label": "1M (Synthetic)",
+          "sequential_sec": 0.461,
+          "parallel_sec": 0.746,
+          "speedup": 0.62
+        },
+        {
+          "workload": 2000000,
+          "label": "2M (Synthetic)",
+          "sequential_sec": 0.923,
+          "parallel_sec": 1.492,
+          "speedup": 0.62
+        }
+      ]
+    },
+    "error": null,
+    "logs": [
+      "[16:33:55] Job scalability_benchmark_0d6540c2 (scalability_benchmark) registered.",
+      "[16:33:55] Job execution started.",
+      "[16:33:55] Preparing workload of 253,680 records...",
+      "[16:33:55] Running sequential baseline (1 core)...",
+      "[16:33:55] Running parallel pipeline across 8 CPU cores...",
+      "[16:33:55] Calculating speedup and scaling metrics...",
+      "[16:33:55] Benchmark complete. Measured speedup: 0.62x",
+      "[16:33:55] Job completed successfully in 0.471s."
+    ]
+  },
+  "scalability_benchmark_c3df6a67": {
+    "id": "scalability_benchmark_c3df6a67",
+    "type": "scalability_benchmark",
+    "status": "completed",
+    "progress": 100,
+    "total_stages": 1,
+    "current_stage": 0,
+    "stages": [],
+    "created_at": 1792407860.5393846,
+    "created_date": "2026-10-19 11:04:20 UTC",
+    "started_at": 1792407860.5734391,
+    "completed_at": 1792407860.9770331,
+    "duration_seconds": 0.404,
+    "params": {
+      "workload_size": 253680,
+      "workers": null
+    },
+    "result": {
+      "workload_size": 253680,
+      "data_label": "Real BRFSS 2015 Survey Data",
+      "is_synthetic": false,
+      "system_cores": 12,
+      "workers_used": 8,
+      "spark_diagnostics": {
+        "spark_available": false,
+        "status": "Offline (Java Runtime Not Detected in PATH)",
+        "java_detected": false,
+        "java_version": null,
+        "java_home": "Not set",
+        "pyspark_installed": true,
+        "pyspark_version": "4.2.0",
+        "session_details": {
+          "session_active": false,
+          "master_url": "local[*]",
+          "execution_mode": "Local (Single-Node In-Process)",
+          "cluster_type": "Local Standalone",
+          "app_name": "DiaRisk_Analytics_BigData",
+          "app_id": null,
+          "default_parallelism": 12,
+          "executor_count": 1,
+          "executor_cores": 12,
+          "driver_memory": "4g",
+          "spark_ui_url": "http://localhost:4040",
+          "spark_ui_reachable": false
+        },
+        "setup_instructions": [
+          "1. Install Java 11 or 17 (e.g., OpenJDK / Eclipse Temurin).",
+          "2. Set JAVA_HOME environment variable pointing to your JDK installation.",
+          "3. Add '%JAVA_HOME%\\bin' to your system PATH.",
+          "4. On Windows, ensure 'winutils.exe' and 'hadoop.dll' are in '%HADOOP_HOME%\\bin'.",
+          "5. Containerized alternative: Run 'docker-compose up' from the project root to launch with pre-configured OpenJDK 17 and PySpark."
+        ],
+        "docker_alternative": "Run 'docker-compose up' to execute Spark within the pre-configured container."
+      },
+      "sequential_baseline": {
+        "name": "Single-Core Sequential",
+        "cores": 1,
+        "runtime_seconds": 0.089,
+        "throughput_records_sec": 2835664,
+        "peak_memory_mb": 290.81,
+        "estimated_cloud_cost_usd": 8e-06
+      },
+      "parallel_pipeline": {
+        "name": "Multi-Core Parallel (8 cores)",
+        "cores": 8,
+        "runtime_seconds": 0.189,
+        "throughput_records_sec": 1344511,
+        "peak_memory_mb": 345.3,
+        "estimated_cloud_cost_usd": 1.8e-05
+      },
+      "scaling_metrics": {
+        "speedup_factor": "0.47x",
+        "speedup_numeric": 0.47,
+        "parallel_efficiency_percent": "5.9%",
+        "parallel_efficiency_numeric": 5.9,
+        "time_saved_percent": 0.0
+      },
+      "multi_workload_comparison": [
+        {
+          "workload": 100000,
+          "label": "100K",
+          "sequential_sec": 0.035,
+          "parallel_sec": 0.074,
+          "speedup": 0.47
+        },
+        {
+          "workload": 253680,
+          "label": "254K (Full BRFSS)",
+          "sequential_sec": 0.089,
+          "parallel_sec": 0.189,
+          "speedup": 0.47
+        },
+        {
+          "workload": 500000,
+          "label": "500K",
+          "sequential_sec": 0.176,
+          "parallel_sec": 0.372,
+          "speedup": 0.47
+        },
+        {
+          "workload": 1000000,
+          "label": "1M (Synthetic)",
+          "sequential_sec": 0.353,
+          "parallel_sec": 0.744,
+          "speedup": 0.47
+        },
+        {
+          "workload": 2000000,
+          "label": "2M (Synthetic)",
+          "sequential_sec": 0.705,
+          "parallel_sec": 1.488,
+          "speedup": 0.47
+        }
+      ]
+    },
+    "error": null,
+    "logs": [
+      "[16:34:20] Job scalability_benchmark_c3df6a67 (scalability_benchmark) registered.",
+      "[16:34:20] Job execution started.",
+      "[16:34:20] Preparing workload of 253,680 records...",
+      "[16:34:20] Running sequential baseline (1 core)...",
+      "[16:34:20] Running parallel pipeline across 8 CPU cores...",
+      "[16:34:20] Calculating speedup and scaling metrics...",
+      "[16:34:20] Benchmark complete. Measured speedup: 0.47x",
+      "[16:34:20] Job completed successfully in 0.404s."
+    ]
+  },
+  "scalability_benchmark_0c943c0d": {
+    "id": "scalability_benchmark_0c943c0d",
+    "type": "scalability_benchmark",
+    "status": "completed",
+    "progress": 100,
+    "total_stages": 1,
+    "current_stage": 0,
+    "stages": [],
+    "created_at": 1792407860.5538647,
+    "created_date": "2026-10-19 11:04:20 UTC",
+    "started_at": 1792407860.589293,
+    "completed_at": 1792407860.9935384,
+    "duration_seconds": 0.404,
+    "params": {
+      "workload_size": 253680,
+      "workers": null
+    },
+    "result": {
+      "workload_size": 253680,
+      "data_label": "Real BRFSS 2015 Survey Data",
+      "is_synthetic": false,
+      "system_cores": 12,
+      "workers_used": 8,
+      "spark_diagnostics": {
+        "spark_available": false,
+        "status": "Offline (Java Runtime Not Detected in PATH)",
+        "java_detected": false,
+        "java_version": null,
+        "java_home": "Not set",
+        "pyspark_installed": true,
+        "pyspark_version": "4.2.0",
+        "session_details": {
+          "session_active": false,
+          "master_url": "local[*]",
+          "execution_mode": "Local (Single-Node In-Process)",
+          "cluster_type": "Local Standalone",
+          "app_name": "DiaRisk_Analytics_BigData",
+          "app_id": null,
+          "default_parallelism": 12,
+          "executor_count": 1,
+          "executor_cores": 12,
+          "driver_memory": "4g",
+          "spark_ui_url": "http://localhost:4040",
+          "spark_ui_reachable": false
+        },
+        "setup_instructions": [
+          "1. Install Java 11 or 17 (e.g., OpenJDK / Eclipse Temurin).",
+          "2. Set JAVA_HOME environment variable pointing to your JDK installation.",
+          "3. Add '%JAVA_HOME%\\bin' to your system PATH.",
+          "4. On Windows, ensure 'winutils.exe' and 'hadoop.dll' are in '%HADOOP_HOME%\\bin'.",
+          "5. Containerized alternative: Run 'docker-compose up' from the project root to launch with pre-configured OpenJDK 17 and PySpark."
+        ],
+        "docker_alternative": "Run 'docker-compose up' to execute Spark within the pre-configured container."
+      },
+      "sequential_baseline": {
+        "name": "Single-Core Sequential",
+        "cores": 1,
+        "runtime_seconds": 0.109,
+        "throughput_records_sec": 2328792,
+        "peak_memory_mb": 273.37,
+        "estimated_cloud_cost_usd": 1e-05
+      },
+      "parallel_pipeline": {
+        "name": "Multi-Core Parallel (8 cores)",
+        "cores": 8,
+        "runtime_seconds": 0.174,
+        "throughput_records_sec": 1454360,
+        "peak_memory_mb": 317.43,
+        "estimated_cloud_cost_usd": 1.6e-05
+      },
+      "scaling_metrics": {
+        "speedup_factor": "0.62x",
+        "speedup_numeric": 0.62,
+        "parallel_efficiency_percent": "7.8%",
+        "parallel_efficiency_numeric": 7.8,
+        "time_saved_percent": 0.0
+      },
+      "multi_workload_comparison": [
+        {
+          "workload": 100000,
+          "label": "100K",
+          "sequential_sec": 0.043,
+          "parallel_sec": 0.069,
+          "speedup": 0.62
+        },
+        {
+          "workload": 253680,
+          "label": "254K (Full BRFSS)",
+          "sequential_sec": 0.109,
+          "parallel_sec": 0.174,
+          "speedup": 0.62
+        },
+        {
+          "workload": 500000,
+          "label": "500K",
+          "sequential_sec": 0.215,
+          "parallel_sec": 0.344,
+          "speedup": 0.62
+        },
+        {
+          "workload": 1000000,
+          "label": "1M (Synthetic)",
+          "sequential_sec": 0.429,
+          "parallel_sec": 0.688,
+          "speedup": 0.62
+        },
+        {
+          "workload": 2000000,
+          "label": "2M (Synthetic)",
+          "sequential_sec": 0.859,
+          "parallel_sec": 1.375,
+          "speedup": 0.62
+        }
+      ]
+    },
+    "error": null,
+    "logs": [
+      "[16:34:20] Job scalability_benchmark_0c943c0d (scalability_benchmark) registered.",
+      "[16:34:20] Job execution started.",
+      "[16:34:20] Preparing workload of 253,680 records...",
+      "[16:34:20] Running sequential baseline (1 core)...",
+      "[16:34:20] Running parallel pipeline across 8 CPU cores...",
+      "[16:34:20] Calculating speedup and scaling metrics...",
+      "[16:34:20] Benchmark complete. Measured speedup: 0.62x",
+      "[16:34:20] Job completed successfully in 0.404s."
+    ]
   }
 }
