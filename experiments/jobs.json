@@ -1,0 +1,3097 @@
+{
+  "scalability_benchmark_bf582d21": {
+    "id": "scalability_benchmark_bf582d21",
+    "type": "scalability_benchmark",
+    "status": "completed",
+    "progress": 100,
+    "total_stages": 1,
+    "current_stage": 0,
+    "stages": [],
+    "created_at": 1792399055.9133866,
+    "created_date": "2026-10-19 08:37:35 UTC",
+    "started_at": 1792399055.9175565,
+    "completed_at": 1792399057.176617,
+    "duration_seconds": 1.259,
+    "params": {
+      "workload_size": 253680,
+      "workers": null
+    },
+    "result": {
+      "workload_size": 253680,
+      "data_label": "Real BRFSS 2015 Survey Data",
+      "is_synthetic": false,
+      "system_cores": 12,
+      "workers_used": 8,
+      "spark_diagnostics": {
+        "spark_available": false,
+        "status": "Offline (Java Runtime Not Detected in PATH)",
+        "java_detected": false,
+        "java_version": null,
+        "java_home": "Not set",
+        "pyspark_installed": true,
+        "pyspark_version": "4.2.0",
+        "session_details": {
+          "session_active": false,
+          "master_url": "local[*]",
+          "execution_mode": "Local (Single-Node In-Process)",
+          "cluster_type": "Local Standalone",
+          "app_name": "DiaRisk_Analytics_BigData",
+          "app_id": null,
+          "default_parallelism": 12,
+          "executor_count": 1,
+          "executor_cores": 12,
+          "driver_memory": "4g",
+          "spark_ui_url": "http://localhost:4040",
+          "spark_ui_reachable": false
+        },
+        "setup_instructions": [
+          "1. Install Java 11 or 17 (e.g., OpenJDK / Eclipse Temurin).",
+          "2. Set JAVA_HOME environment variable pointing to your JDK installation.",
+          "3. Add '%JAVA_HOME%\\bin' to your system PATH.",
+          "4. On Windows, ensure 'winutils.exe' and 'hadoop.dll' are in '%HADOOP_HOME%\\bin'.",
+          "5. Containerized alternative: Run 'docker-compose up' from the project root to launch with pre-configured OpenJDK 17 and PySpark."
+        ],
+        "docker_alternative": "Run 'docker-compose up' to execute Spark within the pre-configured container."
+      },
+      "sequential_baseline": {
+        "name": "Single-Core Sequential",
+        "cores": 1,
+        "runtime_seconds": 0.151,
+        "throughput_records_sec": 1681653,
+        "peak_memory_mb": 451.32,
+        "estimated_cloud_cost_usd": 1.4e-05
+      },
+      "parallel_pipeline": {
+        "name": "Multi-Core Parallel (8 cores)",
+        "cores": 8,
+        "runtime_seconds": 0.315,
+        "throughput_records_sec": 806556,
+        "peak_memory_mb": 509.56,
+        "estimated_cloud_cost_usd": 3e-05
+      },
+      "scaling_metrics": {
+        "speedup_factor": "0.48x",
+        "speedup_numeric": 0.48,
+        "parallel_efficiency_percent": "6.0%",
+        "parallel_efficiency_numeric": 6.0,
+        "time_saved_percent": 0.0
+      },
+      "multi_workload_comparison": [
+        {
+          "workload": 100000,
+          "label": "100K",
+          "sequential_sec": 0.059,
+          "parallel_sec": 0.124,
+          "speedup": 0.48
+        },
+        {
+          "workload": 253680,
+          "label": "254K (Full BRFSS)",
+          "sequential_sec": 0.151,
+          "parallel_sec": 0.315,
+          "speedup": 0.48
+        },
+        {
+          "workload": 500000,
+          "label": "500K",
+          "sequential_sec": 0.297,
+          "parallel_sec": 0.62,
+          "speedup": 0.48
+        },
+        {
+          "workload": 1000000,
+          "label": "1M (Synthetic)",
+          "sequential_sec": 0.595,
+          "parallel_sec": 1.24,
+          "speedup": 0.48
+        },
+        {
+          "workload": 2000000,
+          "label": "2M (Synthetic)",
+          "sequential_sec": 1.189,
+          "parallel_sec": 2.48,
+          "speedup": 0.48
+        }
+      ]
+    },
+    "error": null,
+    "logs": [
+      "[14:07:35] Job scalability_benchmark_bf582d21 (scalability_benchmark) registered.",
+      "[14:07:35] Job execution started.",
+      "[14:07:35] Preparing workload of 253,680 records...",
+      "[14:07:36] Running sequential baseline (1 core)...",
+      "[14:07:36] Running parallel pipeline across 8 CPU cores...",
+      "[14:07:37] Calculating speedup and scaling metrics...",
+      "[14:07:37] Benchmark complete. Measured speedup: 0.48x",
+      "[14:07:37] Job completed successfully in 1.259s."
+    ]
+  },
+  "scalability_benchmark_d79687e1": {
+    "id": "scalability_benchmark_d79687e1",
+    "type": "scalability_benchmark",
+    "status": "completed",
+    "progress": 100,
+    "total_stages": 1,
+    "current_stage": 0,
+    "stages": [],
+    "created_at": 1792399055.9153826,
+    "created_date": "2026-10-19 08:37:35 UTC",
+    "started_at": 1792399055.9195547,
+    "completed_at": 1792399057.1522958,
+    "duration_seconds": 1.233,
+    "params": {
+      "workload_size": 253680,
+      "workers": null
+    },
+    "result": {
+      "workload_size": 253680,
+      "data_label": "Real BRFSS 2015 Survey Data",
+      "is_synthetic": false,
+      "system_cores": 12,
+      "workers_used": 8,
+      "spark_diagnostics": {
+        "spark_available": false,
+        "status": "Offline (Java Runtime Not Detected in PATH)",
+        "java_detected": false,
+        "java_version": null,
+        "java_home": "Not set",
+        "pyspark_installed": true,
+        "pyspark_version": "4.2.0",
+        "session_details": {
+          "session_active": false,
+          "master_url": "local[*]",
+          "execution_mode": "Local (Single-Node In-Process)",
+          "cluster_type": "Local Standalone",
+          "app_name": "DiaRisk_Analytics_BigData",
+          "app_id": null,
+          "default_parallelism": 12,
+          "executor_count": 1,
+          "executor_cores": 12,
+          "driver_memory": "4g",
+          "spark_ui_url": "http://localhost:4040",
+          "spark_ui_reachable": false
+        },
+        "setup_instructions": [
+          "1. Install Java 11 or 17 (e.g., OpenJDK / Eclipse Temurin).",
+          "2. Set JAVA_HOME environment variable pointing to your JDK installation.",
+          "3. Add '%JAVA_HOME%\\bin' to your system PATH.",
+          "4. On Windows, ensure 'winutils.exe' and 'hadoop.dll' are in '%HADOOP_HOME%\\bin'.",
+          "5. Containerized alternative: Run 'docker-compose up' from the project root to launch with pre-configured OpenJDK 17 and PySpark."
+        ],
+        "docker_alternative": "Run 'docker-compose up' to execute Spark within the pre-configured container."
+      },
+      "sequential_baseline": {
+        "name": "Single-Core Sequential",
+        "cores": 1,
+        "runtime_seconds": 0.144,
+        "throughput_records_sec": 1762541,
+        "peak_memory_mb": 483.9,
+        "estimated_cloud_cost_usd": 1.4e-05
+      },
+      "parallel_pipeline": {
+        "name": "Multi-Core Parallel (8 cores)",
+        "cores": 8,
+        "runtime_seconds": 0.308,
+        "throughput_records_sec": 824701,
+        "peak_memory_mb": 538.34,
+        "estimated_cloud_cost_usd": 2.9e-05
+      },
+      "scaling_metrics": {
+        "speedup_factor": "0.47x",
+        "speedup_numeric": 0.47,
+        "parallel_efficiency_percent": "5.9%",
+        "parallel_efficiency_numeric": 5.9,
+        "time_saved_percent": 0.0
+      },
+      "multi_workload_comparison": [
+        {
+          "workload": 100000,
+          "label": "100K",
+          "sequential_sec": 0.057,
+          "parallel_sec": 0.121,
+          "speedup": 0.47
+        },
+        {
+          "workload": 253680,
+          "label": "254K (Full BRFSS)",
+          "sequential_sec": 0.144,
+          "parallel_sec": 0.308,
+          "speedup": 0.47
+        },
+        {
+          "workload": 500000,
+          "label": "500K",
+          "sequential_sec": 0.284,
+          "parallel_sec": 0.606,
+          "speedup": 0.47
+        },
+        {
+          "workload": 1000000,
+          "label": "1M (Synthetic)",
+          "sequential_sec": 0.567,
+          "parallel_sec": 1.213,
+          "speedup": 0.47
+        },
+        {
+          "workload": 2000000,
+          "label": "2M (Synthetic)",
+          "sequential_sec": 1.135,
+          "parallel_sec": 2.425,
+          "speedup": 0.47
+        }
+      ]
+    },
+    "error": null,
+    "logs": [
+      "[14:07:35] Job scalability_benchmark_d79687e1 (scalability_benchmark) registered.",
+      "[14:07:35] Job execution started.",
+      "[14:07:35] Preparing workload of 253,680 records...",
+      "[14:07:36] Running sequential baseline (1 core)...",
+      "[14:07:36] Running parallel pipeline across 8 CPU cores...",
+      "[14:07:37] Calculating speedup and scaling metrics...",
+      "[14:07:37] Benchmark complete. Measured speedup: 0.47x",
+      "[14:07:37] Job completed successfully in 1.233s."
+    ]
+  },
+  "training_6c9fed4e": {
+    "id": "training_6c9fed4e",
+    "type": "training",
+    "status": "completed",
+    "progress": 100,
+    "total_stages": 1,
+    "current_stage": 0,
+    "stages": [],
+    "created_at": 1792399073.277371,
+    "created_date": "2026-10-19 08:37:53 UTC",
+    "started_at": 1792399073.2796004,
+    "completed_at": 1792399076.883256,
+    "duration_seconds": 3.604,
+    "params": {
+      "model_type": "lightgbm",
+      "dataset_id": "binary",
+      "pipeline_id": null,
+      "hyperparameters": {
+        "n_estimators": 100,
+        "max_depth": 6,
+        "learning_rate": 0.1,
+        "balanced_weights": true,
+        "random_state": 42
+      }
+    },
+    "result": {
+      "model_id": "lightgbm_1792399076",
+      "model_type": "lightgbm",
+      "training_time": 1.311,
+      "test_metrics": {
+        "threshold": 0.5,
+        "roc_auc": 0.8294,
+        "pr_auc": 0.4289,
+        "precision": 0.3083,
+        "recall": 0.7967,
+        "sensitivity": 0.7967,
+        "specificity": 0.7106,
+        "f1_score": 0.4446,
+        "brier_score": 0.1737,
+        "confusion_matrix": {
+          "tn": 23273,
+          "fp": 9477,
+          "fn": 1078,
+          "tp": 4224,
+          "total": 38052
+        },
+        "calibration_curve": [
+          {
+            "bin": 1,
+            "pred_prob": 0.0457,
+            "true_prob": 0.0075,
+            "perfect": 0.0457
+          },
+          {
+            "bin": 2,
+            "pred_prob": 0.1456,
+            "true_prob": 0.0339,
+            "perfect": 0.1456
+          },
+          {
+            "bin": 3,
+            "pred_prob": 0.2485,
+            "true_prob": 0.0463,
+            "perfect": 0.2485
+          },
+          {
+            "bin": 4,
+            "pred_prob": 0.3483,
+            "true_prob": 0.0826,
+            "perfect": 0.3483
+          },
+          {
+            "bin": 5,
+            "pred_prob": 0.4502,
+            "true_prob": 0.1243,
+            "perfect": 0.4502
+          },
+          {
+            "bin": 6,
+            "pred_prob": 0.5486,
+            "true_prob": 0.1719,
+            "perfect": 0.5486
+          },
+          {
+            "bin": 7,
+            "pred_prob": 0.6509,
+            "true_prob": 0.2423,
+            "perfect": 0.6509
+          },
+          {
+            "bin": 8,
+            "pred_prob": 0.7497,
+            "true_prob": 0.3325,
+            "perfect": 0.7497
+          },
+          {
+            "bin": 9,
+            "pred_prob": 0.8438,
+            "true_prob": 0.4681,
+            "perfect": 0.8438
+          },
+          {
+            "bin": 10,
+            "pred_prob": 0.9173,
+            "true_prob": 0.6407,
+            "perfect": 0.9173
+          }
+        ],
+        "roc_curve": [
+          {
+            "fpr": 0.0,
+            "tpr": 0.0
+          },
+          {
+            "fpr": 0.004,
+            "tpr": 0.0464
+          },
+          {
+            "fpr": 0.0089,
+            "tpr": 0.0947
+          },
+          {
+            "fpr": 0.0143,
+            "tpr": 0.1326
+          },
+          {
+            "fpr": 0.0196,
+            "tpr": 0.1637
+          },
+          {
+            "fpr": 0.0267,
+            "tpr": 0.1958
+          },
+          {
+            "fpr": 0.0332,
+            "tpr": 0.2271
+          },
+          {
+            "fpr": 0.0395,
+            "tpr": 0.2586
+          },
+          {
+            "fpr": 0.0454,
+            "tpr": 0.2889
+          },
+          {
+            "fpr": 0.0535,
+            "tpr": 0.3154
+          },
+          {
+            "fpr": 0.0618,
+            "tpr": 0.3429
+          },
+          {
+            "fpr": 0.0688,
+            "tpr": 0.3704
+          },
+          {
+            "fpr": 0.077,
+            "tpr": 0.3966
+          },
+          {
+            "fpr": 0.0851,
+            "tpr": 0.4266
+          },
+          {
+            "fpr": 0.0939,
+            "tpr": 0.4534
+          },
+          {
+            "fpr": 0.1033,
+            "tpr": 0.4791
+          },
+          {
+            "fpr": 0.1135,
+            "tpr": 0.5045
+          },
+          {
+            "fpr": 0.1228,
+            "tpr": 0.5283
+          },
+          {
+            "fpr": 0.1316,
+            "tpr": 0.5524
+          },
+          {
+            "fpr": 0.1409,
+            "tpr": 0.5745
+          },
+          {
+            "fpr": 0.1535,
+            "tpr": 0.5971
+          },
+          {
+            "fpr": 0.1643,
+            "tpr": 0.619
+          },
+          {
+            "fpr": 0.1777,
+            "tpr": 0.643
+          },
+          {
+            "fpr": 0.1903,
+            "tpr": 0.6665
+          },
+          {
+            "fpr": 0.2042,
+            "tpr": 0.6877
+          },
+          {
+            "fpr": 0.2162,
+            "tpr": 0.7092
+          },
+          {
+            "fpr": 0.2325,
+            "tpr": 0.7307
+          },
+          {
+            "fpr": 0.2483,
+            "tpr": 0.7503
+          },
+          {
+            "fpr": 0.2651,
+            "tpr": 0.769
+          },
+          {
+            "fpr": 0.2827,
+            "tpr": 0.7897
+          },
+          {
+            "fpr": 0.3005,
+            "tpr": 0.8078
+          },
+          {
+            "fpr": 0.3203,
+            "tpr": 0.8259
+          },
+          {
+            "fpr": 0.341,
+            "tpr": 0.8446
+          },
+          {
+            "fpr": 0.3601,
+            "tpr": 0.8621
+          },
+          {
+            "fpr": 0.386,
+            "tpr": 0.8793
+          },
+          {
+            "fpr": 0.411,
+            "tpr": 0.8965
+          },
+          {
+            "fpr": 0.4458,
+            "tpr": 0.9134
+          },
+          {
+            "fpr": 0.4831,
+            "tpr": 0.9272
+          },
+          {
+            "fpr": 0.5195,
+            "tpr": 0.9406
+          },
+          {
+            "fpr": 0.5606,
+            "tpr": 0.9506
+          },
+          {
+            "fpr": 0.6009,
+            "tpr": 0.9625
+          },
+          {
+            "fpr": 0.6403,
+            "tpr": 0.9723
+          },
+          {
+            "fpr": 0.6817,
+            "tpr": 0.9802
+          },
+          {
+            "fpr": 0.7249,
+            "tpr": 0.9879
+          },
+          {
+            "fpr": 0.7768,
+            "tpr": 0.993
+          },
+          {
+            "fpr": 0.824,
+            "tpr": 0.9955
+          },
+          {
+            "fpr": 0.8723,
+            "tpr": 0.9974
+          },
+          {
+            "fpr": 0.9201,
+            "tpr": 0.9991
+          },
+          {
+            "fpr": 0.9616,
+            "tpr": 0.9996
+          },
+          {
+            "fpr": 1.0,
+            "tpr": 1.0
+          }
+        ],
+        "pr_curve": [
+          {
+            "recall": 1.0,
+            "precision": 0.1393
+          },
+          {
+            "recall": 0.9996,
+            "precision": 0.1428
+          },
+          {
+            "recall": 0.9996,
+            "precision": 0.1465
+          },
+          {
+            "recall": 0.9991,
+            "precision": 0.1498
+          },
+          {
+            "recall": 0.9981,
+            "precision": 0.1533
+          },
+          {
+            "recall": 0.997,
+            "precision": 0.1569
+          },
+          {
+            "recall": 0.9964,
+            "precision": 0.1606
+          },
+          {
+            "recall": 0.9951,
+            "precision": 0.1646
+          },
+          {
+            "recall": 0.994,
+            "precision": 0.1687
+          },
+          {
+            "recall": 0.9926,
+            "precision": 0.1731
+          },
+          {
+            "recall": 0.9902,
+            "precision": 0.1772
+          },
+          {
+            "recall": 0.9874,
+            "precision": 0.1815
+          },
+          {
+            "recall": 0.9828,
+            "precision": 0.1859
+          },
+          {
+            "recall": 0.9789,
+            "precision": 0.1905
+          },
+          {
+            "recall": 0.9736,
+            "precision": 0.1951
+          },
+          {
+            "recall": 0.9685,
+            "precision": 0.2001
+          },
+          {
+            "recall": 0.9627,
+            "precision": 0.2051
+          },
+          {
+            "recall": 0.957,
+            "precision": 0.2105
+          },
+          {
+            "recall": 0.9504,
+            "precision": 0.2159
+          },
+          {
+            "recall": 0.9445,
+            "precision": 0.2221
+          },
+          {
+            "recall": 0.9372,
+            "precision": 0.2282
+          },
+          {
+            "recall": 0.9298,
+            "precision": 0.2347
+          },
+          {
+            "recall": 0.923,
+            "precision": 0.2417
+          },
+          {
+            "recall": 0.9147,
+            "precision": 0.2489
+          },
+          {
+            "recall": 0.9049,
+            "precision": 0.2561
+          },
+          {
+            "recall": 0.8921,
+            "precision": 0.2631
+          },
+          {
+            "recall": 0.8778,
+            "precision": 0.2702
+          },
+          {
+            "recall": 0.8644,
+            "precision": 0.2783
+          },
+          {
+            "recall": 0.8467,
+            "precision": 0.2857
+          },
+          {
+            "recall": 0.8282,
+            "precision": 0.2935
+          },
+          {
+            "recall": 0.8095,
+            "precision": 0.3024
+          },
+          {
+            "recall": 0.7891,
+            "precision": 0.3115
+          },
+          {
+            "recall": 0.7673,
+            "precision": 0.3208
+          },
+          {
+            "recall": 0.7458,
+            "precision": 0.3316
+          },
+          {
+            "recall": 0.7184,
+            "precision": 0.3408
+          },
+          {
+            "recall": 0.6937,
+            "precision": 0.3525
+          },
+          {
+            "recall": 0.6618,
+            "precision": 0.3625
+          },
+          {
+            "recall": 0.6303,
+            "precision": 0.374
+          },
+          {
+            "recall": 0.5968,
+            "precision": 0.3864
+          },
+          {
+            "recall": 0.5636,
+            "precision": 0.4013
+          },
+          {
+            "recall": 0.5213,
+            "precision": 0.4126
+          },
+          {
+            "recall": 0.4811,
+            "precision": 0.4285
+          },
+          {
+            "recall": 0.4364,
+            "precision": 0.4446
+          },
+          {
+            "recall": 0.3865,
+            "precision": 0.4596
+          },
+          {
+            "recall": 0.335,
+            "precision": 0.4779
+          },
+          {
+            "recall": 0.2844,
+            "precision": 0.5072
+          },
+          {
+            "recall": 0.222,
+            "precision": 0.5278
+          },
+          {
+            "recall": 0.1614,
+            "precision": 0.576
+          },
+          {
+            "recall": 0.0886,
+            "precision": 0.6326
+          },
+          {
+            "recall": 0.0,
+            "precision": 1.0
+          }
+        ],
+        "inference_latency_ms": 0.0076
+      },
+      "val_metrics": {
+        "threshold": 0.5,
+        "roc_auc": 0.828,
+        "pr_auc": 0.4254,
+        "precision": 0.3055,
+        "recall": 0.7905,
+        "sensitivity": 0.7905,
+        "specificity": 0.7091,
+        "f1_score": 0.4407,
+        "brier_score": 0.1754,
+        "confusion_matrix": {
+          "tn": 23222,
+          "fp": 9528,
+          "fn": 1111,
+          "tp": 4191,
+          "total": 38052
+        },
+        "calibration_curve": [
+          {
+            "bin": 1,
+            "pred_prob": 0.046,
+            "true_prob": 0.0082,
+            "perfect": 0.046
+          },
+          {
+            "bin": 2,
+            "pred_prob": 0.1464,
+            "true_prob": 0.0286,
+            "perfect": 0.1464
+          },
+          {
+            "bin": 3,
+            "pred_prob": 0.2481,
+            "true_prob": 0.0525,
+            "perfect": 0.2481
+          },
+          {
+            "bin": 4,
+            "pred_prob": 0.3495,
+            "true_prob": 0.0915,
+            "perfect": 0.3495
+          },
+          {
+            "bin": 5,
+            "pred_prob": 0.4506,
+            "true_prob": 0.1205,
+            "perfect": 0.4506
+          },
+          {
+            "bin": 6,
+            "pred_prob": 0.5492,
+            "true_prob": 0.1672,
+            "perfect": 0.5492
+          },
+          {
+            "bin": 7,
+            "pred_prob": 0.6511,
+            "true_prob": 0.2271,
+            "perfect": 0.6511
+          },
+          {
+            "bin": 8,
+            "pred_prob": 0.7502,
+            "true_prob": 0.3337,
+            "perfect": 0.7502
+          },
+          {
+            "bin": 9,
+            "pred_prob": 0.8444,
+            "true_prob": 0.4709,
+            "perfect": 0.8444
+          },
+          {
+            "bin": 10,
+            "pred_prob": 0.918,
+            "true_prob": 0.6436,
+            "perfect": 0.918
+          }
+        ],
+        "roc_curve": [
+          {
+            "fpr": 0.0,
+            "tpr": 0.0
+          },
+          {
+            "fpr": 0.0045,
+            "tpr": 0.0496
+          },
+          {
+            "fpr": 0.0095,
+            "tpr": 0.0903
+          },
+          {
+            "fpr": 0.0155,
+            "tpr": 0.1275
+          },
+          {
+            "fpr": 0.0212,
+            "tpr": 0.1647
+          },
+          {
+            "fpr": 0.0274,
+            "tpr": 0.196
+          },
+          {
+            "fpr": 0.0336,
+            "tpr": 0.2248
+          },
+          {
+            "fpr": 0.0395,
+            "tpr": 0.2582
+          },
+          {
+            "fpr": 0.0467,
+            "tpr": 0.2891
+          },
+          {
+            "fpr": 0.0533,
+            "tpr": 0.3172
+          },
+          {
+            "fpr": 0.0605,
+            "tpr": 0.3478
+          },
+          {
+            "fpr": 0.0667,
+            "tpr": 0.3751
+          },
+          {
+            "fpr": 0.0751,
+            "tpr": 0.4019
+          },
+          {
+            "fpr": 0.0834,
+            "tpr": 0.4278
+          },
+          {
+            "fpr": 0.0919,
+            "tpr": 0.4532
+          },
+          {
+            "fpr": 0.0996,
+            "tpr": 0.4779
+          },
+          {
+            "fpr": 0.1096,
+            "tpr": 0.5009
+          },
+          {
+            "fpr": 0.1195,
+            "tpr": 0.5249
+          },
+          {
+            "fpr": 0.1303,
+            "tpr": 0.5505
+          },
+          {
+            "fpr": 0.1403,
+            "tpr": 0.57
+          },
+          {
+            "fpr": 0.1507,
+            "tpr": 0.5934
+          },
+          {
+            "fpr": 0.1627,
+            "tpr": 0.6177
+          },
+          {
+            "fpr": 0.1757,
+            "tpr": 0.6399
+          },
+          {
+            "fpr": 0.1888,
+            "tpr": 0.6599
+          },
+          {
+            "fpr": 0.2036,
+            "tpr": 0.6824
+          },
+          {
+            "fpr": 0.2172,
+            "tpr": 0.7035
+          },
+          {
+            "fpr": 0.2331,
+            "tpr": 0.7239
+          },
+          {
+            "fpr": 0.2488,
+            "tpr": 0.7456
+          },
+          {
+            "fpr": 0.2669,
+            "tpr": 0.7646
+          },
+          {
+            "fpr": 0.2856,
+            "tpr": 0.7842
+          },
+          {
+            "fpr": 0.3032,
+            "tpr": 0.8042
+          },
+          {
+            "fpr": 0.3245,
+            "tpr": 0.8229
+          },
+          {
+            "fpr": 0.3482,
+            "tpr": 0.8406
+          },
+          {
+            "fpr": 0.3684,
+            "tpr": 0.8587
+          },
+          {
+            "fpr": 0.392,
+            "tpr": 0.8755
+          },
+          {
+            "fpr": 0.4197,
+            "tpr": 0.8921
+          },
+          {
+            "fpr": 0.4471,
+            "tpr": 0.9097
+          },
+          {
+            "fpr": 0.4784,
+            "tpr": 0.9251
+          },
+          {
+            "fpr": 0.5123,
+            "tpr": 0.9383
+          },
+          {
+            "fpr": 0.5467,
+            "tpr": 0.9513
+          },
+          {
+            "fpr": 0.5848,
+            "tpr": 0.961
+          },
+          {
+            "fpr": 0.6248,
+            "tpr": 0.9738
+          },
+          {
+            "fpr": 0.673,
+            "tpr": 0.9794
+          },
+          {
+            "fpr": 0.7228,
+            "tpr": 0.9857
+          },
+          {
+            "fpr": 0.7783,
+            "tpr": 0.9909
+          },
+          {
+            "fpr": 0.8201,
+            "tpr": 0.9942
+          },
+          {
+            "fpr": 0.8671,
+            "tpr": 0.9966
+          },
+          {
+            "fpr": 0.925,
+            "tpr": 0.9987
+          },
+          {
+            "fpr": 0.9616,
+            "tpr": 0.9998
+          },
+          {
+            "fpr": 1.0,
+            "tpr": 1.0
+          }
+        ],
+        "pr_curve": [
+          {
+            "recall": 1.0,
+            "precision": 0.1393
+          },
+          {
+            "recall": 0.9998,
+            "precision": 0.1427
+          },
+          {
+            "recall": 0.9996,
+            "precision": 0.1464
+          },
+          {
+            "recall": 0.9981,
+            "precision": 0.1496
+          },
+          {
+            "recall": 0.9972,
+            "precision": 0.1531
+          },
+          {
+            "recall": 0.9966,
+            "precision": 0.1567
+          },
+          {
+            "recall": 0.9957,
+            "precision": 0.1603
+          },
+          {
+            "recall": 0.9942,
+            "precision": 0.1643
+          },
+          {
+            "recall": 0.9925,
+            "precision": 0.1684
+          },
+          {
+            "recall": 0.9896,
+            "precision": 0.1725
+          },
+          {
+            "recall": 0.9874,
+            "precision": 0.1766
+          },
+          {
+            "recall": 0.9857,
+            "precision": 0.1811
+          },
+          {
+            "recall": 0.9826,
+            "precision": 0.1858
+          },
+          {
+            "recall": 0.9796,
+            "precision": 0.1906
+          },
+          {
+            "recall": 0.9768,
+            "precision": 0.1957
+          },
+          {
+            "recall": 0.974,
+            "precision": 0.2011
+          },
+          {
+            "recall": 0.9666,
+            "precision": 0.2059
+          },
+          {
+            "recall": 0.9606,
+            "precision": 0.211
+          },
+          {
+            "recall": 0.9545,
+            "precision": 0.2168
+          },
+          {
+            "recall": 0.9483,
+            "precision": 0.2227
+          },
+          {
+            "recall": 0.9389,
+            "precision": 0.2283
+          },
+          {
+            "recall": 0.9293,
+            "precision": 0.2342
+          },
+          {
+            "recall": 0.9217,
+            "precision": 0.2411
+          },
+          {
+            "recall": 0.9104,
+            "precision": 0.2474
+          },
+          {
+            "recall": 0.8985,
+            "precision": 0.254
+          },
+          {
+            "recall": 0.8855,
+            "precision": 0.261
+          },
+          {
+            "recall": 0.8699,
+            "precision": 0.2676
+          },
+          {
+            "recall": 0.8553,
+            "precision": 0.2753
+          },
+          {
+            "recall": 0.838,
+            "precision": 0.2826
+          },
+          {
+            "recall": 0.8229,
+            "precision": 0.2914
+          },
+          {
+            "recall": 0.8046,
+            "precision": 0.3002
+          },
+          {
+            "recall": 0.7833,
+            "precision": 0.3085
+          },
+          {
+            "recall": 0.7624,
+            "precision": 0.3181
+          },
+          {
+            "recall": 0.7418,
+            "precision": 0.329
+          },
+          {
+            "recall": 0.7156,
+            "precision": 0.3386
+          },
+          {
+            "recall": 0.6905,
+            "precision": 0.3502
+          },
+          {
+            "recall": 0.6611,
+            "precision": 0.3612
+          },
+          {
+            "recall": 0.6324,
+            "precision": 0.3746
+          },
+          {
+            "recall": 0.5998,
+            "precision": 0.3876
+          },
+          {
+            "recall": 0.5624,
+            "precision": 0.3997
+          },
+          {
+            "recall": 0.5253,
+            "precision": 0.415
+          },
+          {
+            "recall": 0.4866,
+            "precision": 0.4325
+          },
+          {
+            "recall": 0.441,
+            "precision": 0.448
+          },
+          {
+            "recall": 0.394,
+            "precision": 0.4677
+          },
+          {
+            "recall": 0.3402,
+            "precision": 0.4851
+          },
+          {
+            "recall": 0.2833,
+            "precision": 0.505
+          },
+          {
+            "recall": 0.2197,
+            "precision": 0.5227
+          },
+          {
+            "recall": 0.1573,
+            "precision": 0.5612
+          },
+          {
+            "recall": 0.086,
+            "precision": 0.6137
+          },
+          {
+            "recall": 0.0,
+            "precision": 1.0
+          }
+        ],
+        "inference_latency_ms": 0.0
+      },
+      "is_active": false
+    },
+    "error": null,
+    "logs": [
+      "[14:07:53] Job training_6c9fed4e (training) registered.",
+      "[14:07:53] Job execution started.",
+      "[14:07:53] Preparing data splits...",
+      "[14:07:55] Initializing lightgbm algorithm...",
+      "[14:07:55] Fitting lightgbm on 177576 training records...",
+      "[14:07:56] Evaluating validation and test performance...",
+      "[14:07:56] Model training complete. Test ROC-AUC: 0.8294",
+      "[14:07:56] Job completed successfully in 3.604s."
+    ]
+  },
+  "data_processing_33e3ab33": {
+    "id": "data_processing_33e3ab33",
+    "type": "data_processing",
+    "status": "completed",
+    "progress": 100,
+    "total_stages": 12,
+    "current_stage": 12,
+    "stages": [
+      {
+        "stage_num": 1,
+        "title": "Dataset Discovery",
+        "description": "Locate and resolve dataset via project-relative path resolution",
+        "status": "succeeded",
+        "duration_seconds": 0.0006,
+        "input_count": 1,
+        "output_count": 1,
+        "details": {
+          "resolved_path": "dataset\\diabetes_binary_health_indicators_BRFSS2015.csv",
+          "file_size_mb": 21.68,
+          "file_size_bytes": 22738154,
+          "dataset_id": "binary",
+          "filename": "diabetes_binary_health_indicators_BRFSS2015.csv"
+        },
+        "logs": [
+          "Resolved dataset file at: C:\\Users\\Riya\\Downloads\\LP2_mini project\\dataset\\diabetes_binary_health_indicators_BRFSS2015.csv",
+          "Verified file accessibility, size: 21.68 MB"
+        ]
+      },
+      {
+        "stage_num": 2,
+        "title": "Spark Session Initialization Check",
+        "description": "Inspect PySpark JVM availability and execution environment",
+        "status": "succeeded",
+        "duration_seconds": 0.0226,
+        "input_count": 1,
+        "output_count": 1,
+        "details": {
+          "spark_available": false,
+          "execution_mode": "Local High-Performance Engine (JVM not detected)",
+          "java_detected": false,
+          "java_version": null,
+          "pyspark_version": "4.2.0"
+        },
+        "logs": [
+          "Spark environment check: Offline (Java Runtime Not Detected in PATH)",
+          "Using high-performance local multi-threaded engine for data transformation"
+        ]
+      },
+      {
+        "stage_num": 3,
+        "title": "CSV Ingestion",
+        "description": "Stream CSV records into memory buffer with type inference",
+        "status": "succeeded",
+        "duration_seconds": 0.6796,
+        "input_count": 253680,
+        "output_count": 253680,
+        "details": {
+          "rows_loaded": 253680,
+          "columns_loaded": 22,
+          "memory_usage_mb": 42.58,
+          "throughput_rows_sec": 373292
+        },
+        "logs": [
+          "Loaded 253,680 observations in 0.680s",
+          "In-memory data size: 42.58 MB"
+        ]
+      },
+      {
+        "stage_num": 4,
+        "title": "Schema Validation",
+        "description": "Validate column names, data types, and required target variable",
+        "status": "succeeded",
+        "duration_seconds": 0.0007,
+        "input_count": 22,
+        "output_count": 22,
+        "details": {
+          "target_column": "Diabetes_binary",
+          "target_identified": true,
+          "columns_validated": 22,
+          "missing_expected_columns": [],
+          "column_types": {
+            "Diabetes_binary": "float64",
+            "HighBP": "float64",
+            "HighChol": "float64",
+            "CholCheck": "float64",
+            "BMI": "float64",
+            "Smoker": "float64",
+            "Stroke": "float64",
+            "HeartDiseaseorAttack": "float64",
+            "PhysActivity": "float64",
+            "Fruits": "float64",
+            "Veggies": "float64",
+            "HvyAlcoholConsump": "float64",
+            "AnyHealthcare": "float64",
+            "NoDocbcCost": "float64",
+            "GenHlth": "float64",
+            "MentHlth": "float64",
+            "PhysHlth": "float64",
+            "DiffWalk": "float64",
+            "Sex": "float64",
+            "Age": "float64",
+            "Education": "float64",
+            "Income": "float64"
+          }
+        },
+        "logs": [
+          "Target column verified: 'Diabetes_binary'",
+          "Validated 22 feature columns against BRFSS schema"
+        ]
+      },
+      {
+        "stage_num": 5,
+        "title": "Data-Quality Checks",
+        "description": "Perform numeric sanity, bounds verification, and infinite value scans",
+        "status": "succeeded",
+        "duration_seconds": 0.0624,
+        "input_count": 253680,
+        "output_count": 253680,
+        "details": {
+          "infinite_values": 0,
+          "out_of_bounds_clinical_records": 0,
+          "quality_score_percent": 100.0
+        },
+        "logs": [
+          "Zero infinite values detected",
+          "Physiological indicator boundary audit passed (0 anomalies)"
+        ]
+      },
+      {
+        "stage_num": 6,
+        "title": "Missing-Value Analysis",
+        "description": "Scan for null, NA, and missing values across all columns",
+        "status": "succeeded",
+        "duration_seconds": 0.0213,
+        "input_count": 253680,
+        "output_count": 253680,
+        "details": {
+          "total_missing_values": 0,
+          "missing_percentage": 0.0,
+          "imputation_required": false
+        },
+        "logs": [
+          "Verified complete survey dataset: 0 null values found (100% complete)",
+          "No imputation needed"
+        ]
+      },
+      {
+        "stage_num": 7,
+        "title": "Target Distribution Analysis",
+        "description": "Quantify class prevalence, class imbalance ratio, and prior odds",
+        "status": "succeeded",
+        "duration_seconds": 0.0057,
+        "input_count": 253680,
+        "output_count": 253680,
+        "details": {
+          "negative_class_count": 218334,
+          "positive_class_count": 35346,
+          "prevalence_percent": 13.93,
+          "imbalance_ratio": "6.18:1",
+          "recommended_loss_weighting": true
+        },
+        "logs": [
+          "Class 0 (No Diabetes): 218,334 (86.1%)",
+          "Class 1 (Diabetes): 35,346 (13.9%)",
+          "Population Imbalance: 6.18:1"
+        ]
+      },
+      {
+        "stage_num": 8,
+        "title": "Feature Analysis and Selection",
+        "description": "Inspect predictive features and separate target label",
+        "status": "succeeded",
+        "duration_seconds": 0.0,
+        "input_count": 22,
+        "output_count": 21,
+        "details": {
+          "feature_count": 21,
+          "features": [
+            "HighBP",
+            "HighChol",
+            "CholCheck",
+            "BMI",
+            "Smoker",
+            "Stroke",
+            "HeartDiseaseorAttack",
+            "PhysActivity",
+            "Fruits",
+            "Veggies",
+            "HvyAlcoholConsump",
+            "AnyHealthcare",
+            "NoDocbcCost",
+            "GenHlth",
+            "MentHlth",
+            "PhysHlth",
+            "DiffWalk",
+            "Sex",
+            "Age",
+            "Education",
+            "Income"
+          ],
+          "target": "Diabetes_binary"
+        },
+        "logs": [
+          "Extracted 21 predictor features",
+          "Confirmed target isolation from feature matrix"
+        ]
+      },
+      {
+        "stage_num": 9,
+        "title": "Data Preparation & Duplicate Handling",
+        "description": "Investigate identical response vectors and enforce retention policy",
+        "status": "succeeded",
+        "duration_seconds": 0.2387,
+        "input_count": 253680,
+        "output_count": 253680,
+        "details": {
+          "identical_survey_patterns": 24206,
+          "duplicate_percentage": 9.54,
+          "policy_enforced": "Retained survey responses (Natural population proportions preserved)",
+          "final_prepared_records": 253680
+        },
+        "logs": [
+          "Detected 24,206 identical integer response combinations",
+          "Policy: Retained survey responses (Natural population proportions preserved)"
+        ]
+      },
+      {
+        "stage_num": 10,
+        "title": "Leakage-Free Train/Val/Test Splitting",
+        "description": "Perform stratified splitting and fit scaler strictly on X_train",
+        "status": "succeeded",
+        "duration_seconds": 0.5986,
+        "input_count": 253680,
+        "output_count": 253680,
+        "details": {
+          "train_records": 190260,
+          "val_records": 38052,
+          "test_records": 25368,
+          "train_percentage": "75%",
+          "val_percentage": "15%",
+          "test_percentage": "10%",
+          "random_state": 42,
+          "leakage_prevention": "StandardScaler fit ONLY on X_train"
+        },
+        "logs": [
+          "Stratified partition created: Train=190,260, Val=38,052, Test=25,368",
+          "Guaranteed zero data leakage: feature scaler parameters learned exclusively from training set"
+        ]
+      },
+      {
+        "stage_num": 11,
+        "title": "Parquet Export",
+        "description": "Serialize columnar Apache Parquet partitions and fitted scaler",
+        "status": "succeeded",
+        "duration_seconds": 0.612,
+        "input_count": 253680,
+        "output_count": 253680,
+        "details": {
+          "storage_directory": "processed_data\\data_processing_33e3ab33",
+          "files_written": [
+            "X_train.parquet",
+            "y_train.parquet",
+            "X_val.parquet",
+            "y_val.parquet",
+            "X_test.parquet",
+            "y_test.parquet",
+            "X_test_raw.parquet",
+            "scaler.joblib"
+          ],
+          "serialization_format": "Apache Parquet (Columnar)"
+        },
+        "logs": [
+          "Exported Parquet partitions to data_processing_33e3ab33/",
+          "Saved fitted StandardScaler bundle"
+        ]
+      },
+      {
+        "stage_num": 12,
+        "title": "Validation & Output Summary",
+        "description": "Generate manifest, compute checksums, and finalize run metadata",
+        "status": "succeeded",
+        "duration_seconds": 0.0014,
+        "input_count": 253680,
+        "output_count": 253680,
+        "details": {
+          "run_id": "data_processing_33e3ab33",
+          "total_duration_seconds": 2.403,
+          "total_parquet_size_mb": 4.76,
+          "manifest_path": "processed_data/data_processing_33e3ab33/pipeline_run_details.json"
+        },
+        "logs": [
+          "Pipeline run data_processing_33e3ab33 finalized in 2.40s",
+          "Dataset ready for Model Laboratory training"
+        ]
+      }
+    ],
+    "created_at": 1792399136.9436235,
+    "created_date": "2026-10-19 08:38:56 UTC",
+    "started_at": 1792399136.955692,
+    "completed_at": 1792399139.419284,
+    "duration_seconds": 2.464,
+    "params": {
+      "dataset_id": "binary",
+      "train_ratio": 0.75,
+      "val_ratio": 0.15,
+      "test_ratio": 0.1,
+      "random_state": 42,
+      "remove_duplicates": false,
+      "scale_features": true
+    },
+    "result": {
+      "run_id": "data_processing_33e3ab33",
+      "dataset_id": "binary",
+      "filename": "diabetes_binary_health_indicators_BRFSS2015.csv",
+      "status": "completed",
+      "total_records": 253680,
+      "train_records": 190260,
+      "val_records": 38052,
+      "test_records": 25368,
+      "feature_count": 21,
+      "features": [
+        "HighBP",
+        "HighChol",
+        "CholCheck",
+        "BMI",
+        "Smoker",
+        "Stroke",
+        "HeartDiseaseorAttack",
+        "PhysActivity",
+        "Fruits",
+        "Veggies",
+        "HvyAlcoholConsump",
+        "AnyHealthcare",
+        "NoDocbcCost",
+        "GenHlth",
+        "MentHlth",
+        "PhysHlth",
+        "DiffWalk",
+        "Sex",
+        "Age",
+        "Education",
+        "Income"
+      ],
+      "target_column": "Diabetes_binary",
+      "train_prevalence": 13.93,
+      "val_prevalence": 13.93,
+      "test_prevalence": 13.93,
+      "total_duration_seconds": 2.403,
+      "parquet_size_mb": 4.76,
+      "executed_at": 1792399139.3694398,
+      "executed_date": "2026-10-19 08:38:59 UTC",
+      "stages": [
+        {
+          "stage_num": 1,
+          "title": "Dataset Discovery",
+          "description": "Locate and resolve dataset via project-relative path resolution",
+          "status": "succeeded",
+          "duration_seconds": 0.0006,
+          "input_count": 1,
+          "output_count": 1,
+          "details": {
+            "resolved_path": "dataset\\diabetes_binary_health_indicators_BRFSS2015.csv",
+            "file_size_mb": 21.68,
+            "file_size_bytes": 22738154,
+            "dataset_id": "binary",
+            "filename": "diabetes_binary_health_indicators_BRFSS2015.csv"
+          },
+          "logs": [
+            "Resolved dataset file at: C:\\Users\\Riya\\Downloads\\LP2_mini project\\dataset\\diabetes_binary_health_indicators_BRFSS2015.csv",
+            "Verified file accessibility, size: 21.68 MB"
+          ]
+        },
+        {
+          "stage_num": 2,
+          "title": "Spark Session Initialization Check",
+          "description": "Inspect PySpark JVM availability and execution environment",
+          "status": "succeeded",
+          "duration_seconds": 0.0226,
+          "input_count": 1,
+          "output_count": 1,
+          "details": {
+            "spark_available": false,
+            "execution_mode": "Local High-Performance Engine (JVM not detected)",
+            "java_detected": false,
+            "java_version": null,
+            "pyspark_version": "4.2.0"
+          },
+          "logs": [
+            "Spark environment check: Offline (Java Runtime Not Detected in PATH)",
+            "Using high-performance local multi-threaded engine for data transformation"
+          ]
+        },
+        {
+          "stage_num": 3,
+          "title": "CSV Ingestion",
+          "description": "Stream CSV records into memory buffer with type inference",
+          "status": "succeeded",
+          "duration_seconds": 0.6796,
+          "input_count": 253680,
+          "output_count": 253680,
+          "details": {
+            "rows_loaded": 253680,
+            "columns_loaded": 22,
+            "memory_usage_mb": 42.58,
+            "throughput_rows_sec": 373292
+          },
+          "logs": [
+            "Loaded 253,680 observations in 0.680s",
+            "In-memory data size: 42.58 MB"
+          ]
+        },
+        {
+          "stage_num": 4,
+          "title": "Schema Validation",
+          "description": "Validate column names, data types, and required target variable",
+          "status": "succeeded",
+          "duration_seconds": 0.0007,
+          "input_count": 22,
+          "output_count": 22,
+          "details": {
+            "target_column": "Diabetes_binary",
+            "target_identified": true,
+            "columns_validated": 22,
+            "missing_expected_columns": [],
+            "column_types": {
+              "Diabetes_binary": "float64",
+              "HighBP": "float64",
+              "HighChol": "float64",
+              "CholCheck": "float64",
+              "BMI": "float64",
+              "Smoker": "float64",
+              "Stroke": "float64",
+              "HeartDiseaseorAttack": "float64",
+              "PhysActivity": "float64",
+              "Fruits": "float64",
+              "Veggies": "float64",
+              "HvyAlcoholConsump": "float64",
+              "AnyHealthcare": "float64",
+              "NoDocbcCost": "float64",
+              "GenHlth": "float64",
+              "MentHlth": "float64",
+              "PhysHlth": "float64",
+              "DiffWalk": "float64",
+              "Sex": "float64",
+              "Age": "float64",
+              "Education": "float64",
+              "Income": "float64"
+            }
+          },
+          "logs": [
+            "Target column verified: 'Diabetes_binary'",
+            "Validated 22 feature columns against BRFSS schema"
+          ]
+        },
+        {
+          "stage_num": 5,
+          "title": "Data-Quality Checks",
+          "description": "Perform numeric sanity, bounds verification, and infinite value scans",
+          "status": "succeeded",
+          "duration_seconds": 0.0624,
+          "input_count": 253680,
+          "output_count": 253680,
+          "details": {
+            "infinite_values": 0,
+            "out_of_bounds_clinical_records": 0,
+            "quality_score_percent": 100.0
+          },
+          "logs": [
+            "Zero infinite values detected",
+            "Physiological indicator boundary audit passed (0 anomalies)"
+          ]
+        },
+        {
+          "stage_num": 6,
+          "title": "Missing-Value Analysis",
+          "description": "Scan for null, NA, and missing values across all columns",
+          "status": "succeeded",
+          "duration_seconds": 0.0213,
+          "input_count": 253680,
+          "output_count": 253680,
+          "details": {
+            "total_missing_values": 0,
+            "missing_percentage": 0.0,
+            "imputation_required": false
+          },
+          "logs": [
+            "Verified complete survey dataset: 0 null values found (100% complete)",
+            "No imputation needed"
+          ]
+        },
+        {
+          "stage_num": 7,
+          "title": "Target Distribution Analysis",
+          "description": "Quantify class prevalence, class imbalance ratio, and prior odds",
+          "status": "succeeded",
+          "duration_seconds": 0.0057,
+          "input_count": 253680,
+          "output_count": 253680,
+          "details": {
+            "negative_class_count": 218334,
+            "positive_class_count": 35346,
+            "prevalence_percent": 13.93,
+            "imbalance_ratio": "6.18:1",
+            "recommended_loss_weighting": true
+          },
+          "logs": [
+            "Class 0 (No Diabetes): 218,334 (86.1%)",
+            "Class 1 (Diabetes): 35,346 (13.9%)",
+            "Population Imbalance: 6.18:1"
+          ]
+        },
+        {
+          "stage_num": 8,
+          "title": "Feature Analysis and Selection",
+          "description": "Inspect predictive features and separate target label",
+          "status": "succeeded",
+          "duration_seconds": 0.0,
+          "input_count": 22,
+          "output_count": 21,
+          "details": {
+            "feature_count": 21,
+            "features": [
+              "HighBP",
+              "HighChol",
+              "CholCheck",
+              "BMI",
+              "Smoker",
+              "Stroke",
+              "HeartDiseaseorAttack",
+              "PhysActivity",
+              "Fruits",
+              "Veggies",
+              "HvyAlcoholConsump",
+              "AnyHealthcare",
+              "NoDocbcCost",
+              "GenHlth",
+              "MentHlth",
+              "PhysHlth",
+              "DiffWalk",
+              "Sex",
+              "Age",
+              "Education",
+              "Income"
+            ],
+            "target": "Diabetes_binary"
+          },
+          "logs": [
+            "Extracted 21 predictor features",
+            "Confirmed target isolation from feature matrix"
+          ]
+        },
+        {
+          "stage_num": 9,
+          "title": "Data Preparation & Duplicate Handling",
+          "description": "Investigate identical response vectors and enforce retention policy",
+          "status": "succeeded",
+          "duration_seconds": 0.2387,
+          "input_count": 253680,
+          "output_count": 253680,
+          "details": {
+            "identical_survey_patterns": 24206,
+            "duplicate_percentage": 9.54,
+            "policy_enforced": "Retained survey responses (Natural population proportions preserved)",
+            "final_prepared_records": 253680
+          },
+          "logs": [
+            "Detected 24,206 identical integer response combinations",
+            "Policy: Retained survey responses (Natural population proportions preserved)"
+          ]
+        },
+        {
+          "stage_num": 10,
+          "title": "Leakage-Free Train/Val/Test Splitting",
+          "description": "Perform stratified splitting and fit scaler strictly on X_train",
+          "status": "succeeded",
+          "duration_seconds": 0.5986,
+          "input_count": 253680,
+          "output_count": 253680,
+          "details": {
+            "train_records": 190260,
+            "val_records": 38052,
+            "test_records": 25368,
+            "train_percentage": "75%",
+            "val_percentage": "15%",
+            "test_percentage": "10%",
+            "random_state": 42,
+            "leakage_prevention": "StandardScaler fit ONLY on X_train"
+          },
+          "logs": [
+            "Stratified partition created: Train=190,260, Val=38,052, Test=25,368",
+            "Guaranteed zero data leakage: feature scaler parameters learned exclusively from training set"
+          ]
+        },
+        {
+          "stage_num": 11,
+          "title": "Parquet Export",
+          "description": "Serialize columnar Apache Parquet partitions and fitted scaler",
+          "status": "succeeded",
+          "duration_seconds": 0.612,
+          "input_count": 253680,
+          "output_count": 253680,
+          "details": {
+            "storage_directory": "processed_data\\data_processing_33e3ab33",
+            "files_written": [
+              "X_train.parquet",
+              "y_train.parquet",
+              "X_val.parquet",
+              "y_val.parquet",
+              "X_test.parquet",
+              "y_test.parquet",
+              "X_test_raw.parquet",
+              "scaler.joblib"
+            ],
+            "serialization_format": "Apache Parquet (Columnar)"
+          },
+          "logs": [
+            "Exported Parquet partitions to data_processing_33e3ab33/",
+            "Saved fitted StandardScaler bundle"
+          ]
+        },
+        {
+          "stage_num": 12,
+          "title": "Validation & Output Summary",
+          "description": "Generate manifest, compute checksums, and finalize run metadata",
+          "status": "succeeded",
+          "duration_seconds": 0.0014,
+          "input_count": 253680,
+          "output_count": 253680,
+          "details": {
+            "run_id": "data_processing_33e3ab33",
+            "total_duration_seconds": 2.403,
+            "total_parquet_size_mb": 4.76,
+            "manifest_path": "processed_data/data_processing_33e3ab33/pipeline_run_details.json"
+          },
+          "logs": [
+            "Pipeline run data_processing_33e3ab33 finalized in 2.40s",
+            "Dataset ready for Model Laboratory training"
+          ]
+        }
+      ]
+    },
+    "error": null,
+    "logs": [
+      "[14:08:56] Job data_processing_33e3ab33 (data_processing) registered.",
+      "[14:08:56] Job execution started.",
+      "[14:08:56] Completed Stage 1: Dataset Discovery",
+      "[14:08:57] Completed Stage 2: Spark Session Initialization Check",
+      "[14:08:57] Completed Stage 3: CSV Ingestion",
+      "[14:08:57] Completed Stage 4: Schema Validation",
+      "[14:08:57] Completed Stage 5: Data-Quality Checks",
+      "[14:08:57] Completed Stage 6: Missing-Value Analysis",
+      "[14:08:57] Completed Stage 7: Target Distribution Analysis",
+      "[14:08:57] Completed Stage 8: Feature Analysis and Selection",
+      "[14:08:58] Completed Stage 9: Data Preparation & Duplicate Handling",
+      "[14:08:58] Completed Stage 10: Leakage-Free Train/Val/Test Splitting",
+      "[14:08:59] Completed Stage 11: Parquet Export",
+      "[14:08:59] Completed Stage 12: Validation & Output Summary",
+      "[14:08:59] Job completed successfully in 2.464s."
+    ]
+  },
+  "scalability_benchmark_0d8dedb3": {
+    "id": "scalability_benchmark_0d8dedb3",
+    "type": "scalability_benchmark",
+    "status": "completed",
+    "progress": 100,
+    "total_stages": 1,
+    "current_stage": 0,
+    "stages": [],
+    "created_at": 1792399595.9680996,
+    "created_date": "2026-10-19 08:46:35 UTC",
+    "started_at": 1792399595.9812434,
+    "completed_at": 1792399596.335823,
+    "duration_seconds": 0.355,
+    "params": {
+      "workload_size": 253680,
+      "workers": null
+    },
+    "result": {
+      "workload_size": 253680,
+      "data_label": "Real BRFSS 2015 Survey Data",
+      "is_synthetic": false,
+      "system_cores": 12,
+      "workers_used": 8,
+      "spark_diagnostics": {
+        "spark_available": false,
+        "status": "Offline (Java Runtime Not Detected in PATH)",
+        "java_detected": false,
+        "java_version": null,
+        "java_home": "Not set",
+        "pyspark_installed": true,
+        "pyspark_version": "4.2.0",
+        "session_details": {
+          "session_active": false,
+          "master_url": "local[*]",
+          "execution_mode": "Local (Single-Node In-Process)",
+          "cluster_type": "Local Standalone",
+          "app_name": "DiaRisk_Analytics_BigData",
+          "app_id": null,
+          "default_parallelism": 12,
+          "executor_count": 1,
+          "executor_cores": 12,
+          "driver_memory": "4g",
+          "spark_ui_url": "http://localhost:4040",
+          "spark_ui_reachable": false
+        },
+        "setup_instructions": [
+          "1. Install Java 11 or 17 (e.g., OpenJDK / Eclipse Temurin).",
+          "2. Set JAVA_HOME environment variable pointing to your JDK installation.",
+          "3. Add '%JAVA_HOME%\\bin' to your system PATH.",
+          "4. On Windows, ensure 'winutils.exe' and 'hadoop.dll' are in '%HADOOP_HOME%\\bin'.",
+          "5. Containerized alternative: Run 'docker-compose up' from the project root to launch with pre-configured OpenJDK 17 and PySpark."
+        ],
+        "docker_alternative": "Run 'docker-compose up' to execute Spark within the pre-configured container."
+      },
+      "sequential_baseline": {
+        "name": "Single-Core Sequential",
+        "cores": 1,
+        "runtime_seconds": 0.108,
+        "throughput_records_sec": 2353884,
+        "peak_memory_mb": 506.52,
+        "estimated_cloud_cost_usd": 1e-05
+      },
+      "parallel_pipeline": {
+        "name": "Multi-Core Parallel (8 cores)",
+        "cores": 8,
+        "runtime_seconds": 0.158,
+        "throughput_records_sec": 1608778,
+        "peak_memory_mb": 594.61,
+        "estimated_cloud_cost_usd": 1.5e-05
+      },
+      "scaling_metrics": {
+        "speedup_factor": "0.68x",
+        "speedup_numeric": 0.68,
+        "parallel_efficiency_percent": "8.5%",
+        "parallel_efficiency_numeric": 8.5,
+        "time_saved_percent": 0.0
+      },
+      "multi_workload_comparison": [
+        {
+          "workload": 100000,
+          "label": "100K",
+          "sequential_sec": 0.042,
+          "parallel_sec": 0.062,
+          "speedup": 0.68
+        },
+        {
+          "workload": 253680,
+          "label": "254K (Full BRFSS)",
+          "sequential_sec": 0.108,
+          "parallel_sec": 0.158,
+          "speedup": 0.68
+        },
+        {
+          "workload": 500000,
+          "label": "500K",
+          "sequential_sec": 0.212,
+          "parallel_sec": 0.311,
+          "speedup": 0.68
+        },
+        {
+          "workload": 1000000,
+          "label": "1M (Synthetic)",
+          "sequential_sec": 0.425,
+          "parallel_sec": 0.622,
+          "speedup": 0.68
+        },
+        {
+          "workload": 2000000,
+          "label": "2M (Synthetic)",
+          "sequential_sec": 0.85,
+          "parallel_sec": 1.243,
+          "speedup": 0.68
+        }
+      ]
+    },
+    "error": null,
+    "logs": [
+      "[14:16:35] Job scalability_benchmark_0d8dedb3 (scalability_benchmark) registered.",
+      "[14:16:35] Job execution started.",
+      "[14:16:35] Preparing workload of 253,680 records...",
+      "[14:16:36] Running sequential baseline (1 core)...",
+      "[14:16:36] Running parallel pipeline across 8 CPU cores...",
+      "[14:16:36] Calculating speedup and scaling metrics...",
+      "[14:16:36] Benchmark complete. Measured speedup: 0.68x",
+      "[14:16:36] Job completed successfully in 0.355s."
+    ]
+  },
+  "scalability_benchmark_dbf3fafb": {
+    "id": "scalability_benchmark_dbf3fafb",
+    "type": "scalability_benchmark",
+    "status": "completed",
+    "progress": 100,
+    "total_stages": 1,
+    "current_stage": 0,
+    "stages": [],
+    "created_at": 1792399595.9907482,
+    "created_date": "2026-10-19 08:46:35 UTC",
+    "started_at": 1792399595.9996815,
+    "completed_at": 1792399596.3465116,
+    "duration_seconds": 0.347,
+    "params": {
+      "workload_size": 253680,
+      "workers": null
+    },
+    "result": {
+      "workload_size": 253680,
+      "data_label": "Real BRFSS 2015 Survey Data",
+      "is_synthetic": false,
+      "system_cores": 12,
+      "workers_used": 8,
+      "spark_diagnostics": {
+        "spark_available": false,
+        "status": "Offline (Java Runtime Not Detected in PATH)",
+        "java_detected": false,
+        "java_version": null,
+        "java_home": "Not set",
+        "pyspark_installed": true,
+        "pyspark_version": "4.2.0",
+        "session_details": {
+          "session_active": false,
+          "master_url": "local[*]",
+          "execution_mode": "Local (Single-Node In-Process)",
+          "cluster_type": "Local Standalone",
+          "app_name": "DiaRisk_Analytics_BigData",
+          "app_id": null,
+          "default_parallelism": 12,
+          "executor_count": 1,
+          "executor_cores": 12,
+          "driver_memory": "4g",
+          "spark_ui_url": "http://localhost:4040",
+          "spark_ui_reachable": false
+        },
+        "setup_instructions": [
+          "1. Install Java 11 or 17 (e.g., OpenJDK / Eclipse Temurin).",
+          "2. Set JAVA_HOME environment variable pointing to your JDK installation.",
+          "3. Add '%JAVA_HOME%\\bin' to your system PATH.",
+          "4. On Windows, ensure 'winutils.exe' and 'hadoop.dll' are in '%HADOOP_HOME%\\bin'.",
+          "5. Containerized alternative: Run 'docker-compose up' from the project root to launch with pre-configured OpenJDK 17 and PySpark."
+        ],
+        "docker_alternative": "Run 'docker-compose up' to execute Spark within the pre-configured container."
+      },
+      "sequential_baseline": {
+        "name": "Single-Core Sequential",
+        "cores": 1,
+        "runtime_seconds": 0.108,
+        "throughput_records_sec": 2345338,
+        "peak_memory_mb": 467.14,
+        "estimated_cloud_cost_usd": 1e-05
+      },
+      "parallel_pipeline": {
+        "name": "Multi-Core Parallel (8 cores)",
+        "cores": 8,
+        "runtime_seconds": 0.17,
+        "throughput_records_sec": 1490605,
+        "peak_memory_mb": 531.5,
+        "estimated_cloud_cost_usd": 1.6e-05
+      },
+      "scaling_metrics": {
+        "speedup_factor": "0.64x",
+        "speedup_numeric": 0.64,
+        "parallel_efficiency_percent": "8.0%",
+        "parallel_efficiency_numeric": 8.0,
+        "time_saved_percent": 0.0
+      },
+      "multi_workload_comparison": [
+        {
+          "workload": 100000,
+          "label": "100K",
+          "sequential_sec": 0.043,
+          "parallel_sec": 0.067,
+          "speedup": 0.64
+        },
+        {
+          "workload": 253680,
+          "label": "254K (Full BRFSS)",
+          "sequential_sec": 0.108,
+          "parallel_sec": 0.17,
+          "speedup": 0.64
+        },
+        {
+          "workload": 500000,
+          "label": "500K",
+          "sequential_sec": 0.213,
+          "parallel_sec": 0.335,
+          "speedup": 0.64
+        },
+        {
+          "workload": 1000000,
+          "label": "1M (Synthetic)",
+          "sequential_sec": 0.426,
+          "parallel_sec": 0.671,
+          "speedup": 0.64
+        },
+        {
+          "workload": 2000000,
+          "label": "2M (Synthetic)",
+          "sequential_sec": 0.853,
+          "parallel_sec": 1.342,
+          "speedup": 0.64
+        }
+      ]
+    },
+    "error": null,
+    "logs": [
+      "[14:16:35] Job scalability_benchmark_dbf3fafb (scalability_benchmark) registered.",
+      "[14:16:35] Job execution started.",
+      "[14:16:36] Preparing workload of 253,680 records...",
+      "[14:16:36] Running sequential baseline (1 core)...",
+      "[14:16:36] Running parallel pipeline across 8 CPU cores...",
+      "[14:16:36] Calculating speedup and scaling metrics...",
+      "[14:16:36] Benchmark complete. Measured speedup: 0.64x",
+      "[14:16:36] Job completed successfully in 0.347s."
+    ]
+  },
+  "scalability_benchmark_5b8583ce": {
+    "id": "scalability_benchmark_5b8583ce",
+    "type": "scalability_benchmark",
+    "status": "completed",
+    "progress": 100,
+    "total_stages": 1,
+    "current_stage": 0,
+    "stages": [],
+    "created_at": 1792399886.2953722,
+    "created_date": "2026-10-19 08:51:26 UTC",
+    "started_at": 1792399886.3186612,
+    "completed_at": 1792399886.8659084,
+    "duration_seconds": 0.547,
+    "params": {
+      "workload_size": 253680,
+      "workers": null
+    },
+    "result": {
+      "workload_size": 253680,
+      "data_label": "Real BRFSS 2015 Survey Data",
+      "is_synthetic": false,
+      "system_cores": 12,
+      "workers_used": 8,
+      "spark_diagnostics": {
+        "spark_available": false,
+        "status": "Offline (Java Runtime Not Detected in PATH)",
+        "java_detected": false,
+        "java_version": null,
+        "java_home": "Not set",
+        "pyspark_installed": true,
+        "pyspark_version": "4.2.0",
+        "session_details": {
+          "session_active": false,
+          "master_url": "local[*]",
+          "execution_mode": "Local (Single-Node In-Process)",
+          "cluster_type": "Local Standalone",
+          "app_name": "DiaRisk_Analytics_BigData",
+          "app_id": null,
+          "default_parallelism": 12,
+          "executor_count": 1,
+          "executor_cores": 12,
+          "driver_memory": "4g",
+          "spark_ui_url": "http://localhost:4040",
+          "spark_ui_reachable": false
+        },
+        "setup_instructions": [
+          "1. Install Java 11 or 17 (e.g., OpenJDK / Eclipse Temurin).",
+          "2. Set JAVA_HOME environment variable pointing to your JDK installation.",
+          "3. Add '%JAVA_HOME%\\bin' to your system PATH.",
+          "4. On Windows, ensure 'winutils.exe' and 'hadoop.dll' are in '%HADOOP_HOME%\\bin'.",
+          "5. Containerized alternative: Run 'docker-compose up' from the project root to launch with pre-configured OpenJDK 17 and PySpark."
+        ],
+        "docker_alternative": "Run 'docker-compose up' to execute Spark within the pre-configured container."
+      },
+      "sequential_baseline": {
+        "name": "Single-Core Sequential",
+        "cores": 1,
+        "runtime_seconds": 0.153,
+        "throughput_records_sec": 1659886,
+        "peak_memory_mb": 512.91,
+        "estimated_cloud_cost_usd": 1.4e-05
+      },
+      "parallel_pipeline": {
+        "name": "Multi-Core Parallel (8 cores)",
+        "cores": 8,
+        "runtime_seconds": 0.255,
+        "throughput_records_sec": 993772,
+        "peak_memory_mb": 574.21,
+        "estimated_cloud_cost_usd": 2.4e-05
+      },
+      "scaling_metrics": {
+        "speedup_factor": "0.6x",
+        "speedup_numeric": 0.6,
+        "parallel_efficiency_percent": "7.5%",
+        "parallel_efficiency_numeric": 7.5,
+        "time_saved_percent": 0.0
+      },
+      "multi_workload_comparison": [
+        {
+          "workload": 100000,
+          "label": "100K",
+          "sequential_sec": 0.06,
+          "parallel_sec": 0.101,
+          "speedup": 0.6
+        },
+        {
+          "workload": 253680,
+          "label": "254K (Full BRFSS)",
+          "sequential_sec": 0.153,
+          "parallel_sec": 0.255,
+          "speedup": 0.6
+        },
+        {
+          "workload": 500000,
+          "label": "500K",
+          "sequential_sec": 0.301,
+          "parallel_sec": 0.503,
+          "speedup": 0.6
+        },
+        {
+          "workload": 1000000,
+          "label": "1M (Synthetic)",
+          "sequential_sec": 0.602,
+          "parallel_sec": 1.006,
+          "speedup": 0.6
+        },
+        {
+          "workload": 2000000,
+          "label": "2M (Synthetic)",
+          "sequential_sec": 1.205,
+          "parallel_sec": 2.013,
+          "speedup": 0.6
+        }
+      ]
+    },
+    "error": null,
+    "logs": [
+      "[14:21:26] Job scalability_benchmark_5b8583ce (scalability_benchmark) registered.",
+      "[14:21:26] Job execution started.",
+      "[14:21:26] Preparing workload of 253,680 records...",
+      "[14:21:26] Running sequential baseline (1 core)...",
+      "[14:21:26] Running parallel pipeline across 8 CPU cores...",
+      "[14:21:26] Calculating speedup and scaling metrics...",
+      "[14:21:26] Benchmark complete. Measured speedup: 0.6x",
+      "[14:21:26] Job completed successfully in 0.547s."
+    ]
+  },
+  "scalability_benchmark_a1dd3df3": {
+    "id": "scalability_benchmark_a1dd3df3",
+    "type": "scalability_benchmark",
+    "status": "completed",
+    "progress": 100,
+    "total_stages": 1,
+    "current_stage": 0,
+    "stages": [],
+    "created_at": 1792399886.3053946,
+    "created_date": "2026-10-19 08:51:26 UTC",
+    "started_at": 1792399886.3287108,
+    "completed_at": 1792399886.9010262,
+    "duration_seconds": 0.572,
+    "params": {
+      "workload_size": 253680,
+      "workers": null
+    },
+    "result": {
+      "workload_size": 253680,
+      "data_label": "Real BRFSS 2015 Survey Data",
+      "is_synthetic": false,
+      "system_cores": 12,
+      "workers_used": 8,
+      "spark_diagnostics": {
+        "spark_available": false,
+        "status": "Offline (Java Runtime Not Detected in PATH)",
+        "java_detected": false,
+        "java_version": null,
+        "java_home": "Not set",
+        "pyspark_installed": true,
+        "pyspark_version": "4.2.0",
+        "session_details": {
+          "session_active": false,
+          "master_url": "local[*]",
+          "execution_mode": "Local (Single-Node In-Process)",
+          "cluster_type": "Local Standalone",
+          "app_name": "DiaRisk_Analytics_BigData",
+          "app_id": null,
+          "default_parallelism": 12,
+          "executor_count": 1,
+          "executor_cores": 12,
+          "driver_memory": "4g",
+          "spark_ui_url": "http://localhost:4040",
+          "spark_ui_reachable": false
+        },
+        "setup_instructions": [
+          "1. Install Java 11 or 17 (e.g., OpenJDK / Eclipse Temurin).",
+          "2. Set JAVA_HOME environment variable pointing to your JDK installation.",
+          "3. Add '%JAVA_HOME%\\bin' to your system PATH.",
+          "4. On Windows, ensure 'winutils.exe' and 'hadoop.dll' are in '%HADOOP_HOME%\\bin'.",
+          "5. Containerized alternative: Run 'docker-compose up' from the project root to launch with pre-configured OpenJDK 17 and PySpark."
+        ],
+        "docker_alternative": "Run 'docker-compose up' to execute Spark within the pre-configured container."
+      },
+      "sequential_baseline": {
+        "name": "Single-Core Sequential",
+        "cores": 1,
+        "runtime_seconds": 0.162,
+        "throughput_records_sec": 1566535,
+        "peak_memory_mb": 465.64,
+        "estimated_cloud_cost_usd": 1.5e-05
+      },
+      "parallel_pipeline": {
+        "name": "Multi-Core Parallel (8 cores)",
+        "cores": 8,
+        "runtime_seconds": 0.269,
+        "throughput_records_sec": 943869,
+        "peak_memory_mb": 534.69,
+        "estimated_cloud_cost_usd": 2.5e-05
+      },
+      "scaling_metrics": {
+        "speedup_factor": "0.6x",
+        "speedup_numeric": 0.6,
+        "parallel_efficiency_percent": "7.5%",
+        "parallel_efficiency_numeric": 7.5,
+        "time_saved_percent": 0.0
+      },
+      "multi_workload_comparison": [
+        {
+          "workload": 100000,
+          "label": "100K",
+          "sequential_sec": 0.064,
+          "parallel_sec": 0.106,
+          "speedup": 0.6
+        },
+        {
+          "workload": 253680,
+          "label": "254K (Full BRFSS)",
+          "sequential_sec": 0.162,
+          "parallel_sec": 0.269,
+          "speedup": 0.6
+        },
+        {
+          "workload": 500000,
+          "label": "500K",
+          "sequential_sec": 0.319,
+          "parallel_sec": 0.53,
+          "speedup": 0.6
+        },
+        {
+          "workload": 1000000,
+          "label": "1M (Synthetic)",
+          "sequential_sec": 0.638,
+          "parallel_sec": 1.059,
+          "speedup": 0.6
+        },
+        {
+          "workload": 2000000,
+          "label": "2M (Synthetic)",
+          "sequential_sec": 1.277,
+          "parallel_sec": 2.119,
+          "speedup": 0.6
+        }
+      ]
+    },
+    "error": null,
+    "logs": [
+      "[14:21:26] Job scalability_benchmark_a1dd3df3 (scalability_benchmark) registered.",
+      "[14:21:26] Job execution started.",
+      "[14:21:26] Preparing workload of 253,680 records...",
+      "[14:21:26] Running sequential baseline (1 core)...",
+      "[14:21:26] Running parallel pipeline across 8 CPU cores...",
+      "[14:21:26] Calculating speedup and scaling metrics...",
+      "[14:21:26] Benchmark complete. Measured speedup: 0.6x",
+      "[14:21:26] Job completed successfully in 0.572s."
+    ]
+  },
+  "data_processing_96ab23b7": {
+    "id": "data_processing_96ab23b7",
+    "type": "data_processing",
+    "status": "completed",
+    "progress": 100,
+    "total_stages": 12,
+    "current_stage": 12,
+    "stages": [
+      {
+        "stage_num": 1,
+        "title": "Dataset Discovery",
+        "description": "Locate and resolve dataset via project-relative path resolution",
+        "status": "succeeded",
+        "duration_seconds": 0.0002,
+        "input_count": 1,
+        "output_count": 1,
+        "details": {
+          "resolved_path": "dataset\\diabetes_binary_health_indicators_BRFSS2015.csv",
+          "file_size_mb": 21.68,
+          "file_size_bytes": 22738154,
+          "dataset_id": "binary",
+          "filename": "diabetes_binary_health_indicators_BRFSS2015.csv"
+        },
+        "logs": [
+          "Resolved dataset file at: C:\\Users\\Riya\\Downloads\\LP2_mini project\\dataset\\diabetes_binary_health_indicators_BRFSS2015.csv",
+          "Verified file accessibility, size: 21.68 MB"
+        ]
+      },
+      {
+        "stage_num": 2,
+        "title": "Spark Session Initialization Check",
+        "description": "Inspect PySpark JVM availability and execution environment",
+        "status": "succeeded",
+        "duration_seconds": 0.0034,
+        "input_count": 1,
+        "output_count": 1,
+        "details": {
+          "spark_available": false,
+          "execution_mode": "Local High-Performance Engine (JVM not detected)",
+          "java_detected": false,
+          "java_version": null,
+          "pyspark_version": "4.2.0"
+        },
+        "logs": [
+          "Spark environment check: Offline (Java Runtime Not Detected in PATH)",
+          "Using high-performance local multi-threaded engine for data transformation"
+        ]
+      },
+      {
+        "stage_num": 3,
+        "title": "CSV Ingestion",
+        "description": "Stream CSV records into memory buffer with type inference",
+        "status": "succeeded",
+        "duration_seconds": 0.2501,
+        "input_count": 253680,
+        "output_count": 253680,
+        "details": {
+          "rows_loaded": 253680,
+          "columns_loaded": 22,
+          "memory_usage_mb": 42.58,
+          "throughput_rows_sec": 1014391
+        },
+        "logs": [
+          "Loaded 253,680 observations in 0.250s",
+          "In-memory data size: 42.58 MB"
+        ]
+      },
+      {
+        "stage_num": 4,
+        "title": "Schema Validation",
+        "description": "Validate column names, data types, and required target variable",
+        "status": "succeeded",
+        "duration_seconds": 0.0006,
+        "input_count": 22,
+        "output_count": 22,
+        "details": {
+          "target_column": "Diabetes_binary",
+          "target_identified": true,
+          "columns_validated": 22,
+          "missing_expected_columns": [],
+          "column_types": {
+            "Diabetes_binary": "float64",
+            "HighBP": "float64",
+            "HighChol": "float64",
+            "CholCheck": "float64",
+            "BMI": "float64",
+            "Smoker": "float64",
+            "Stroke": "float64",
+            "HeartDiseaseorAttack": "float64",
+            "PhysActivity": "float64",
+            "Fruits": "float64",
+            "Veggies": "float64",
+            "HvyAlcoholConsump": "float64",
+            "AnyHealthcare": "float64",
+            "NoDocbcCost": "float64",
+            "GenHlth": "float64",
+            "MentHlth": "float64",
+            "PhysHlth": "float64",
+            "DiffWalk": "float64",
+            "Sex": "float64",
+            "Age": "float64",
+            "Education": "float64",
+            "Income": "float64"
+          }
+        },
+        "logs": [
+          "Target column verified: 'Diabetes_binary'",
+          "Validated 22 feature columns against BRFSS schema"
+        ]
+      },
+      {
+        "stage_num": 5,
+        "title": "Data-Quality Checks",
+        "description": "Perform numeric sanity, bounds verification, and infinite value scans",
+        "status": "succeeded",
+        "duration_seconds": 0.0236,
+        "input_count": 253680,
+        "output_count": 253680,
+        "details": {
+          "infinite_values": 0,
+          "out_of_bounds_clinical_records": 0,
+          "quality_score_percent": 100.0
+        },
+        "logs": [
+          "Zero infinite values detected",
+          "Physiological indicator boundary audit passed (0 anomalies)"
+        ]
+      },
+      {
+        "stage_num": 6,
+        "title": "Missing-Value Analysis",
+        "description": "Scan for null, NA, and missing values across all columns",
+        "status": "succeeded",
+        "duration_seconds": 0.0071,
+        "input_count": 253680,
+        "output_count": 253680,
+        "details": {
+          "total_missing_values": 0,
+          "missing_percentage": 0.0,
+          "imputation_required": false
+        },
+        "logs": [
+          "Verified complete survey dataset: 0 null values found (100% complete)",
+          "No imputation needed"
+        ]
+      },
+      {
+        "stage_num": 7,
+        "title": "Target Distribution Analysis",
+        "description": "Quantify class prevalence, class imbalance ratio, and prior odds",
+        "status": "succeeded",
+        "duration_seconds": 0.0018,
+        "input_count": 253680,
+        "output_count": 253680,
+        "details": {
+          "negative_class_count": 218334,
+          "positive_class_count": 35346,
+          "prevalence_percent": 13.93,
+          "imbalance_ratio": "6.18:1",
+          "recommended_loss_weighting": true
+        },
+        "logs": [
+          "Class 0 (No Diabetes): 218,334 (86.1%)",
+          "Class 1 (Diabetes): 35,346 (13.9%)",
+          "Population Imbalance: 6.18:1"
+        ]
+      },
+      {
+        "stage_num": 8,
+        "title": "Feature Analysis and Selection",
+        "description": "Inspect predictive features and separate target label",
+        "status": "succeeded",
+        "duration_seconds": 0.0,
+        "input_count": 22,
+        "output_count": 21,
+        "details": {
+          "feature_count": 21,
+          "features": [
+            "HighBP",
+            "HighChol",
+            "CholCheck",
+            "BMI",
+            "Smoker",
+            "Stroke",
+            "HeartDiseaseorAttack",
+            "PhysActivity",
+            "Fruits",
+            "Veggies",
+            "HvyAlcoholConsump",
+            "AnyHealthcare",
+            "NoDocbcCost",
+            "GenHlth",
+            "MentHlth",
+            "PhysHlth",
+            "DiffWalk",
+            "Sex",
+            "Age",
+            "Education",
+            "Income"
+          ],
+          "target": "Diabetes_binary"
+        },
+        "logs": [
+          "Extracted 21 predictor features",
+          "Confirmed target isolation from feature matrix"
+        ]
+      },
+      {
+        "stage_num": 9,
+        "title": "Data Preparation & Duplicate Handling",
+        "description": "Investigate identical response vectors and enforce retention policy",
+        "status": "succeeded",
+        "duration_seconds": 0.0866,
+        "input_count": 253680,
+        "output_count": 253680,
+        "details": {
+          "identical_survey_patterns": 24206,
+          "duplicate_percentage": 9.54,
+          "policy_enforced": "Retained survey responses (Natural population proportions preserved)",
+          "final_prepared_records": 253680
+        },
+        "logs": [
+          "Detected 24,206 identical integer response combinations",
+          "Policy: Retained survey responses (Natural population proportions preserved)"
+        ]
+      },
+      {
+        "stage_num": 10,
+        "title": "Leakage-Free Train/Val/Test Splitting",
+        "description": "Perform stratified splitting and fit scaler strictly on X_train",
+        "status": "succeeded",
+        "duration_seconds": 0.2336,
+        "input_count": 253680,
+        "output_count": 253680,
+        "details": {
+          "train_records": 177576,
+          "val_records": 38052,
+          "test_records": 38052,
+          "train_percentage": "70%",
+          "val_percentage": "15%",
+          "test_percentage": "15%",
+          "random_state": 42,
+          "leakage_prevention": "StandardScaler fit ONLY on X_train"
+        },
+        "logs": [
+          "Stratified partition created: Train=177,576, Val=38,052, Test=38,052",
+          "Guaranteed zero data leakage: feature scaler parameters learned exclusively from training set"
+        ]
+      },
+      {
+        "stage_num": 11,
+        "title": "Parquet Export",
+        "description": "Serialize columnar Apache Parquet partitions and fitted scaler",
+        "status": "succeeded",
+        "duration_seconds": 0.2403,
+        "input_count": 253680,
+        "output_count": 253680,
+        "details": {
+          "storage_directory": "processed_data\\data_processing_96ab23b7",
+          "files_written": [
+            "X_train.parquet",
+            "y_train.parquet",
+            "X_val.parquet",
+            "y_val.parquet",
+            "X_test.parquet",
+            "y_test.parquet",
+            "X_test_raw.parquet",
+            "scaler.joblib"
+          ],
+          "serialization_format": "Apache Parquet (Columnar)"
+        },
+        "logs": [
+          "Exported Parquet partitions to data_processing_96ab23b7/",
+          "Saved fitted StandardScaler bundle"
+        ]
+      },
+      {
+        "stage_num": 12,
+        "title": "Validation & Output Summary",
+        "description": "Generate manifest, compute checksums, and finalize run metadata",
+        "status": "succeeded",
+        "duration_seconds": 0.0004,
+        "input_count": 253680,
+        "output_count": 253680,
+        "details": {
+          "run_id": "data_processing_96ab23b7",
+          "total_duration_seconds": 0.913,
+          "total_parquet_size_mb": 4.95,
+          "manifest_path": "processed_data/data_processing_96ab23b7/pipeline_run_details.json"
+        },
+        "logs": [
+          "Pipeline run data_processing_96ab23b7 finalized in 0.91s",
+          "Dataset ready for Model Laboratory training"
+        ]
+      }
+    ],
+    "created_at": 1792400963.7475026,
+    "created_date": "2026-10-19 09:09:23 UTC",
+    "started_at": 1792400963.7475026,
+    "completed_at": 1792400964.682232,
+    "duration_seconds": 0.935,
+    "params": {
+      "dataset_id": "binary",
+      "train_ratio": 0.7,
+      "val_ratio": 0.15,
+      "test_ratio": 0.15,
+      "random_state": 42,
+      "remove_duplicates": false,
+      "scale_features": true
+    },
+    "result": {
+      "run_id": "data_processing_96ab23b7",
+      "dataset_id": "binary",
+      "filename": "diabetes_binary_health_indicators_BRFSS2015.csv",
+      "status": "completed",
+      "total_records": 253680,
+      "train_records": 177576,
+      "val_records": 38052,
+      "test_records": 38052,
+      "feature_count": 21,
+      "features": [
+        "HighBP",
+        "HighChol",
+        "CholCheck",
+        "BMI",
+        "Smoker",
+        "Stroke",
+        "HeartDiseaseorAttack",
+        "PhysActivity",
+        "Fruits",
+        "Veggies",
+        "HvyAlcoholConsump",
+        "AnyHealthcare",
+        "NoDocbcCost",
+        "GenHlth",
+        "MentHlth",
+        "PhysHlth",
+        "DiffWalk",
+        "Sex",
+        "Age",
+        "Education",
+        "Income"
+      ],
+      "target_column": "Diabetes_binary",
+      "train_prevalence": 13.93,
+      "val_prevalence": 13.93,
+      "test_prevalence": 13.93,
+      "total_duration_seconds": 0.913,
+      "parquet_size_mb": 4.95,
+      "executed_at": 1792400964.6716301,
+      "executed_date": "2026-10-19 09:09:24 UTC",
+      "stages": [
+        {
+          "stage_num": 1,
+          "title": "Dataset Discovery",
+          "description": "Locate and resolve dataset via project-relative path resolution",
+          "status": "succeeded",
+          "duration_seconds": 0.0002,
+          "input_count": 1,
+          "output_count": 1,
+          "details": {
+            "resolved_path": "dataset\\diabetes_binary_health_indicators_BRFSS2015.csv",
+            "file_size_mb": 21.68,
+            "file_size_bytes": 22738154,
+            "dataset_id": "binary",
+            "filename": "diabetes_binary_health_indicators_BRFSS2015.csv"
+          },
+          "logs": [
+            "Resolved dataset file at: C:\\Users\\Riya\\Downloads\\LP2_mini project\\dataset\\diabetes_binary_health_indicators_BRFSS2015.csv",
+            "Verified file accessibility, size: 21.68 MB"
+          ]
+        },
+        {
+          "stage_num": 2,
+          "title": "Spark Session Initialization Check",
+          "description": "Inspect PySpark JVM availability and execution environment",
+          "status": "succeeded",
+          "duration_seconds": 0.0034,
+          "input_count": 1,
+          "output_count": 1,
+          "details": {
+            "spark_available": false,
+            "execution_mode": "Local High-Performance Engine (JVM not detected)",
+            "java_detected": false,
+            "java_version": null,
+            "pyspark_version": "4.2.0"
+          },
+          "logs": [
+            "Spark environment check: Offline (Java Runtime Not Detected in PATH)",
+            "Using high-performance local multi-threaded engine for data transformation"
+          ]
+        },
+        {
+          "stage_num": 3,
+          "title": "CSV Ingestion",
+          "description": "Stream CSV records into memory buffer with type inference",
+          "status": "succeeded",
+          "duration_seconds": 0.2501,
+          "input_count": 253680,
+          "output_count": 253680,
+          "details": {
+            "rows_loaded": 253680,
+            "columns_loaded": 22,
+            "memory_usage_mb": 42.58,
+            "throughput_rows_sec": 1014391
+          },
+          "logs": [
+            "Loaded 253,680 observations in 0.250s",
+            "In-memory data size: 42.58 MB"
+          ]
+        },
+        {
+          "stage_num": 4,
+          "title": "Schema Validation",
+          "description": "Validate column names, data types, and required target variable",
+          "status": "succeeded",
+          "duration_seconds": 0.0006,
+          "input_count": 22,
+          "output_count": 22,
+          "details": {
+            "target_column": "Diabetes_binary",
+            "target_identified": true,
+            "columns_validated": 22,
+            "missing_expected_columns": [],
+            "column_types": {
+              "Diabetes_binary": "float64",
+              "HighBP": "float64",
+              "HighChol": "float64",
+              "CholCheck": "float64",
+              "BMI": "float64",
+              "Smoker": "float64",
+              "Stroke": "float64",
+              "HeartDiseaseorAttack": "float64",
+              "PhysActivity": "float64",
+              "Fruits": "float64",
+              "Veggies": "float64",
+              "HvyAlcoholConsump": "float64",
+              "AnyHealthcare": "float64",
+              "NoDocbcCost": "float64",
+              "GenHlth": "float64",
+              "MentHlth": "float64",
+              "PhysHlth": "float64",
+              "DiffWalk": "float64",
+              "Sex": "float64",
+              "Age": "float64",
+              "Education": "float64",
+              "Income": "float64"
+            }
+          },
+          "logs": [
+            "Target column verified: 'Diabetes_binary'",
+            "Validated 22 feature columns against BRFSS schema"
+          ]
+        },
+        {
+          "stage_num": 5,
+          "title": "Data-Quality Checks",
+          "description": "Perform numeric sanity, bounds verification, and infinite value scans",
+          "status": "succeeded",
+          "duration_seconds": 0.0236,
+          "input_count": 253680,
+          "output_count": 253680,
+          "details": {
+            "infinite_values": 0,
+            "out_of_bounds_clinical_records": 0,
+            "quality_score_percent": 100.0
+          },
+          "logs": [
+            "Zero infinite values detected",
+            "Physiological indicator boundary audit passed (0 anomalies)"
+          ]
+        },
+        {
+          "stage_num": 6,
+          "title": "Missing-Value Analysis",
+          "description": "Scan for null, NA, and missing values across all columns",
+          "status": "succeeded",
+          "duration_seconds": 0.0071,
+          "input_count": 253680,
+          "output_count": 253680,
+          "details": {
+            "total_missing_values": 0,
+            "missing_percentage": 0.0,
+            "imputation_required": false
+          },
+          "logs": [
+            "Verified complete survey dataset: 0 null values found (100% complete)",
+            "No imputation needed"
+          ]
+        },
+        {
+          "stage_num": 7,
+          "title": "Target Distribution Analysis",
+          "description": "Quantify class prevalence, class imbalance ratio, and prior odds",
+          "status": "succeeded",
+          "duration_seconds": 0.0018,
+          "input_count": 253680,
+          "output_count": 253680,
+          "details": {
+            "negative_class_count": 218334,
+            "positive_class_count": 35346,
+            "prevalence_percent": 13.93,
+            "imbalance_ratio": "6.18:1",
+            "recommended_loss_weighting": true
+          },
+          "logs": [
+            "Class 0 (No Diabetes): 218,334 (86.1%)",
+            "Class 1 (Diabetes): 35,346 (13.9%)",
+            "Population Imbalance: 6.18:1"
+          ]
+        },
+        {
+          "stage_num": 8,
+          "title": "Feature Analysis and Selection",
+          "description": "Inspect predictive features and separate target label",
+          "status": "succeeded",
+          "duration_seconds": 0.0,
+          "input_count": 22,
+          "output_count": 21,
+          "details": {
+            "feature_count": 21,
+            "features": [
+              "HighBP",
+              "HighChol",
+              "CholCheck",
+              "BMI",
+              "Smoker",
+              "Stroke",
+              "HeartDiseaseorAttack",
+              "PhysActivity",
+              "Fruits",
+              "Veggies",
+              "HvyAlcoholConsump",
+              "AnyHealthcare",
+              "NoDocbcCost",
+              "GenHlth",
+              "MentHlth",
+              "PhysHlth",
+              "DiffWalk",
+              "Sex",
+              "Age",
+              "Education",
+              "Income"
+            ],
+            "target": "Diabetes_binary"
+          },
+          "logs": [
+            "Extracted 21 predictor features",
+            "Confirmed target isolation from feature matrix"
+          ]
+        },
+        {
+          "stage_num": 9,
+          "title": "Data Preparation & Duplicate Handling",
+          "description": "Investigate identical response vectors and enforce retention policy",
+          "status": "succeeded",
+          "duration_seconds": 0.0866,
+          "input_count": 253680,
+          "output_count": 253680,
+          "details": {
+            "identical_survey_patterns": 24206,
+            "duplicate_percentage": 9.54,
+            "policy_enforced": "Retained survey responses (Natural population proportions preserved)",
+            "final_prepared_records": 253680
+          },
+          "logs": [
+            "Detected 24,206 identical integer response combinations",
+            "Policy: Retained survey responses (Natural population proportions preserved)"
+          ]
+        },
+        {
+          "stage_num": 10,
+          "title": "Leakage-Free Train/Val/Test Splitting",
+          "description": "Perform stratified splitting and fit scaler strictly on X_train",
+          "status": "succeeded",
+          "duration_seconds": 0.2336,
+          "input_count": 253680,
+          "output_count": 253680,
+          "details": {
+            "train_records": 177576,
+            "val_records": 38052,
+            "test_records": 38052,
+            "train_percentage": "70%",
+            "val_percentage": "15%",
+            "test_percentage": "15%",
+            "random_state": 42,
+            "leakage_prevention": "StandardScaler fit ONLY on X_train"
+          },
+          "logs": [
+            "Stratified partition created: Train=177,576, Val=38,052, Test=38,052",
+            "Guaranteed zero data leakage: feature scaler parameters learned exclusively from training set"
+          ]
+        },
+        {
+          "stage_num": 11,
+          "title": "Parquet Export",
+          "description": "Serialize columnar Apache Parquet partitions and fitted scaler",
+          "status": "succeeded",
+          "duration_seconds": 0.2403,
+          "input_count": 253680,
+          "output_count": 253680,
+          "details": {
+            "storage_directory": "processed_data\\data_processing_96ab23b7",
+            "files_written": [
+              "X_train.parquet",
+              "y_train.parquet",
+              "X_val.parquet",
+              "y_val.parquet",
+              "X_test.parquet",
+              "y_test.parquet",
+              "X_test_raw.parquet",
+              "scaler.joblib"
+            ],
+            "serialization_format": "Apache Parquet (Columnar)"
+          },
+          "logs": [
+            "Exported Parquet partitions to data_processing_96ab23b7/",
+            "Saved fitted StandardScaler bundle"
+          ]
+        },
+        {
+          "stage_num": 12,
+          "title": "Validation & Output Summary",
+          "description": "Generate manifest, compute checksums, and finalize run metadata",
+          "status": "succeeded",
+          "duration_seconds": 0.0004,
+          "input_count": 253680,
+          "output_count": 253680,
+          "details": {
+            "run_id": "data_processing_96ab23b7",
+            "total_duration_seconds": 0.913,
+            "total_parquet_size_mb": 4.95,
+            "manifest_path": "processed_data/data_processing_96ab23b7/pipeline_run_details.json"
+          },
+          "logs": [
+            "Pipeline run data_processing_96ab23b7 finalized in 0.91s",
+            "Dataset ready for Model Laboratory training"
+          ]
+        }
+      ]
+    },
+    "error": null,
+    "logs": [
+      "[14:39:23] Job data_processing_96ab23b7 (data_processing) registered.",
+      "[14:39:23] Job execution started.",
+      "[14:39:23] Completed Stage 1: Dataset Discovery",
+      "[14:39:23] Completed Stage 2: Spark Session Initialization Check",
+      "[14:39:24] Completed Stage 3: CSV Ingestion",
+      "[14:39:24] Completed Stage 4: Schema Validation",
+      "[14:39:24] Completed Stage 5: Data-Quality Checks",
+      "[14:39:24] Completed Stage 6: Missing-Value Analysis",
+      "[14:39:24] Completed Stage 7: Target Distribution Analysis",
+      "[14:39:24] Completed Stage 8: Feature Analysis and Selection",
+      "[14:39:24] Completed Stage 9: Data Preparation & Duplicate Handling",
+      "[14:39:24] Completed Stage 10: Leakage-Free Train/Val/Test Splitting",
+      "[14:39:24] Completed Stage 11: Parquet Export",
+      "[14:39:24] Completed Stage 12: Validation & Output Summary",
+      "[14:39:24] Job completed successfully in 0.935s."
+    ]
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "run_id": "data_processing_96ab23b7",
+  "dataset_id": "binary",
+  "filename": "diabetes_binary_health_indicators_BRFSS2015.csv",
+  "status": "completed",
+  "total_records": 253680,
+  "train_records": 177576,
+  "val_records": 38052,
+  "test_records": 38052,
+  "feature_count": 21,
+  "features": [
+    "HighBP",
+    "HighChol",
+    "CholCheck",
+    "BMI",
+    "Smoker",
+    "Stroke",
+    "HeartDiseaseorAttack",
+    "PhysActivity",
+    "Fruits",
+    "Veggies",
+    "HvyAlcoholConsump",
+    "AnyHealthcare",
+    "NoDocbcCost",
+    "GenHlth",
+    "MentHlth",
+    "PhysHlth",
+    "DiffWalk",
+    "Sex",
+    "Age",
+    "Education",
+    "Income"
+  ],
+  "target_column": "Diabetes_binary",
+  "train_prevalence": 13.93,
+  "val_prevalence": 13.93,
+  "test_prevalence": 13.93,
+  "total_duration_seconds": 0.913,
+  "parquet_size_mb": 4.95,
+  "executed_at": 1792400964.6716301,
+  "executed_date": "2026-10-19 09:09:24 UTC",
+  "stages": [
+    {
+      "stage_num": 1,
+      "title": "Dataset Discovery",
+      "description": "Locate and resolve dataset via project-relative path resolution",
+      "status": "succeeded",
+      "duration_seconds": 0.0002,
+      "input_count": 1,
+      "output_count": 1,
+      "details": {
+        "resolved_path": "dataset\\diabetes_binary_health_indicators_BRFSS2015.csv",
+        "file_size_mb": 21.68,
+        "file_size_bytes": 22738154,
+        "dataset_id": "binary",
+        "filename": "diabetes_binary_health_indicators_BRFSS2015.csv"
+      },
+      "logs": [
+        "Resolved dataset file at: C:\\Users\\Riya\\Downloads\\LP2_mini project\\dataset\\diabetes_binary_health_indicators_BRFSS2015.csv",
+        "Verified file accessibility, size: 21.68 MB"
+      ]
+    },
+    {
+      "stage_num": 2,
+      "title": "Spark Session Initialization Check",
+      "description": "Inspect PySpark JVM availability and execution environment",
+      "status": "succeeded",
+      "duration_seconds": 0.0034,
+      "input_count": 1,
+      "output_count": 1,
+      "details": {
+        "spark_available": false,
+        "execution_mode": "Local High-Performance Engine (JVM not detected)",
+        "java_detected": false,
+        "java_version": null,
+        "pyspark_version": "4.2.0"
+      },
+      "logs": [
+        "Spark environment check: Offline (Java Runtime Not Detected in PATH)",
+        "Using high-performance local multi-threaded engine for data transformation"
+      ]
+    },
+    {
+      "stage_num": 3,
+      "title": "CSV Ingestion",
+      "description": "Stream CSV records into memory buffer with type inference",
+      "status": "succeeded",
+      "duration_seconds": 0.2501,
+      "input_count": 253680,
+      "output_count": 253680,
+      "details": {
+        "rows_loaded": 253680,
+        "columns_loaded": 22,
+        "memory_usage_mb": 42.58,
+        "throughput_rows_sec": 1014391
+      },
+      "logs": [
+        "Loaded 253,680 observations in 0.250s",
+        "In-memory data size: 42.58 MB"
+      ]
+    },
+    {
+      "stage_num": 4,
+      "title": "Schema Validation",
+      "description": "Validate column names, data types, and required target variable",
+      "status": "succeeded",
+      "duration_seconds": 0.0006,
+      "input_count": 22,
+      "output_count": 22,
+      "details": {
+        "target_column": "Diabetes_binary",
+        "target_identified": true,
+        "columns_validated": 22,
+        "missing_expected_columns": [],
+        "column_types": {
+          "Diabetes_binary": "float64",
+          "HighBP": "float64",
+          "HighChol": "float64",
+          "CholCheck": "float64",
+          "BMI": "float64",
+          "Smoker": "float64",
+          "Stroke": "float64",
+          "HeartDiseaseorAttack": "float64",
+          "PhysActivity": "float64",
+          "Fruits": "float64",
+          "Veggies": "float64",
+          "HvyAlcoholConsump": "float64",
+          "AnyHealthcare": "float64",
+          "NoDocbcCost": "float64",
+          "GenHlth": "float64",
+          "MentHlth": "float64",
+          "PhysHlth": "float64",
+          "DiffWalk": "float64",
+          "Sex": "float64",
+          "Age": "float64",
+          "Education": "float64",
+          "Income": "float64"
+        }
+      },
+      "logs": [
+        "Target column verified: 'Diabetes_binary'",
+        "Validated 22 feature columns against BRFSS schema"
+      ]
+    },
+    {
+      "stage_num": 5,
+      "title": "Data-Quality Checks",
+      "description": "Perform numeric sanity, bounds verification, and infinite value scans",
+      "status": "succeeded",
+      "duration_seconds": 0.0236,
+      "input_count": 253680,
+      "output_count": 253680,
+      "details": {
+        "infinite_values": 0,
+        "out_of_bounds_clinical_records": 0,
+        "quality_score_percent": 100.0
+      },
+      "logs": [
+        "Zero infinite values detected",
+        "Physiological indicator boundary audit passed (0 anomalies)"
+      ]
+    },
+    {
+      "stage_num": 6,
+      "title": "Missing-Value Analysis",
+      "description": "Scan for null, NA, and missing values across all columns",
+      "status": "succeeded",
+      "duration_seconds": 0.0071,
+      "input_count": 253680,
+      "output_count": 253680,
+      "details": {
+        "total_missing_values": 0,
+        "missing_percentage": 0.0,
+        "imputation_required": false
+      },
+      "logs": [
+        "Verified complete survey dataset: 0 null values found (100% complete)",
+        "No imputation needed"
+      ]
+    },
+    {
+      "stage_num": 7,
+      "title": "Target Distribution Analysis",
+      "description": "Quantify class prevalence, class imbalance ratio, and prior odds",
+      "status": "succeeded",
+      "duration_seconds": 0.0018,
+      "input_count": 253680,
+      "output_count": 253680,
+      "details": {
+        "negative_class_count": 218334,
+        "positive_class_count": 35346,
+        "prevalence_percent": 13.93,
+        "imbalance_ratio": "6.18:1",
+        "recommended_loss_weighting": true
+      },
+      "logs": [
+        "Class 0 (No Diabetes): 218,334 (86.1%)",
+        "Class 1 (Diabetes): 35,346 (13.9%)",
+        "Population Imbalance: 6.18:1"
+      ]
+    },
+    {
+      "stage_num": 8,
+      "title": "Feature Analysis and Selection",
+      "description": "Inspect predictive features and separate target label",
+      "status": "succeeded",
+      "duration_seconds": 0.0,
+      "input_count": 22,
+      "output_count": 21,
+      "details": {
+        "feature_count": 21,
+        "features": [
+          "HighBP",
+          "HighChol",
+          "CholCheck",
+          "BMI",
+          "Smoker",
+          "Stroke",
+          "HeartDiseaseorAttack",
+          "PhysActivity",
+          "Fruits",
+          "Veggies",
+          "HvyAlcoholConsump",
+          "AnyHealthcare",
+          "NoDocbcCost",
+          "GenHlth",
+          "MentHlth",
+          "PhysHlth",
+          "DiffWalk",
+          "Sex",
+          "Age",
+          "Education",
+          "Income"
+        ],
+        "target": "Diabetes_binary"
+      },
+      "logs": [
+        "Extracted 21 predictor features",
+        "Confirmed target isolation from feature matrix"
+      ]
+    },
+    {
+      "stage_num": 9,
+      "title": "Data Preparation & Duplicate Handling",
+      "description": "Investigate identical response vectors and enforce retention policy",
+      "status": "succeeded",
+      "duration_seconds": 0.0866,
+      "input_count": 253680,
+      "output_count": 253680,
+      "details": {
+        "identical_survey_patterns": 24206,
+        "duplicate_percentage": 9.54,
+        "policy_enforced": "Retained survey responses (Natural population proportions preserved)",
+        "final_prepared_records": 253680
+      },
+      "logs": [
+        "Detected 24,206 identical integer response combinations",
+        "Policy: Retained survey responses (Natural population proportions preserved)"
+      ]
+    },
+    {
+      "stage_num": 10,
+      "title": "Leakage-Free Train/Val/Test Splitting",
+      "description": "Perform stratified splitting and fit scaler strictly on X_train",
+      "status": "succeeded",
+      "duration_seconds": 0.2336,
+      "input_count": 253680,
+      "output_count": 253680,
+      "details": {
+        "train_records": 177576,
+        "val_records": 38052,
+        "test_records": 38052,
+        "train_percentage": "70%",
+        "val_percentage": "15%",
+        "test_percentage": "15%",
+        "random_state": 42,
+        "leakage_prevention": "StandardScaler fit ONLY on X_train"
+      },
+      "logs": [
+        "Stratified partition created: Train=177,576, Val=38,052, Test=38,052",
+        "Guaranteed zero data leakage: feature scaler parameters learned exclusively from training set"
+      ]
+    },
+    {
+      "stage_num": 11,
+      "title": "Parquet Export",
+      "description": "Serialize columnar Apache Parquet partitions and fitted scaler",
+      "status": "succeeded",
+      "duration_seconds": 0.2403,
+      "input_count": 253680,
+      "output_count": 253680,
+      "details": {
+        "storage_directory": "processed_data\\data_processing_96ab23b7",
+        "files_written": [
+          "X_train.parquet",
+          "y_train.parquet",
+          "X_val.parquet",
+          "y_val.parquet",
+          "X_test.parquet",
+          "y_test.parquet",
+          "X_test_raw.parquet",
+          "scaler.joblib"
+        ],
+        "serialization_format": "Apache Parquet (Columnar)"
+      },
+      "logs": [
+        "Exported Parquet partitions to data_processing_96ab23b7/",
+        "Saved fitted StandardScaler bundle"
+      ]
+    }
+  ]
+}

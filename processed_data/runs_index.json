@@ -1,0 +1,24 @@
+[
+  {
+    "run_id": "data_processing_96ab23b7",
+    "dataset_id": "binary",
+    "total_records": 253680,
+    "train_records": 177576,
+    "val_records": 38052,
+    "test_records": 38052,
+    "duration_seconds": 0.913,
+    "executed_date": "2026-10-19 09:09:24 UTC",
+    "status": "completed"
+  },
+  {
+    "run_id": "data_processing_33e3ab33",
+    "dataset_id": "binary",
+    "total_records": 253680,
+    "train_records": 190260,
+    "val_records": 38052,
+    "test_records": 25368,
+    "duration_seconds": 2.403,
+    "executed_date": "2026-10-19 08:38:59 UTC",
+    "status": "completed"
+  }
+]

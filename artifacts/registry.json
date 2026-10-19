@@ -1,0 +1,116 @@
+{
+  "active_model_id": "lightgbm_1792395272",
+  "models": {
+    "logistic_regression_1792395259": {
+      "model_id": "logistic_regression_1792395259",
+      "model_type": "logistic_regression",
+      "pipeline_id": "prep_binary_1792395258",
+      "dataset_id": "binary",
+      "artifact_file": "artifacts/logistic_regression_1792395259.joblib",
+      "training_time": 0.121,
+      "test_roc_auc": 0.8216,
+      "test_pr_auc": 0.3964,
+      "test_f1": 0.4438,
+      "test_recall": 0.7633,
+      "test_precision": 0.3129,
+      "test_brier": 0.1764,
+      "inference_latency_ms": 0.0003,
+      "hyperparameters": {
+        "max_iter": 200,
+        "random_state": 42
+      },
+      "created_at": 1792395259.1404524,
+      "created_date": "2026-10-19 07:34:19 UTC"
+    },
+    "lightgbm_1792395272": {
+      "model_id": "lightgbm_1792395272",
+      "model_type": "lightgbm",
+      "pipeline_id": "prep_binary_1792395271",
+      "dataset_id": "binary",
+      "artifact_file": "artifacts/lightgbm_1792395272.joblib",
+      "training_time": 0.523,
+      "test_roc_auc": 0.8294,
+      "test_pr_auc": 0.4289,
+      "test_f1": 0.4446,
+      "test_recall": 0.7967,
+      "test_precision": 0.3083,
+      "test_brier": 0.1737,
+      "inference_latency_ms": 0.0029,
+      "hyperparameters": {
+        "n_estimators": 100,
+        "max_depth": 6,
+        "learning_rate": 0.1,
+        "random_state": 42
+      },
+      "created_at": 1792395272.6975076,
+      "created_date": "2026-10-19 07:34:32 UTC"
+    },
+    "random_forest_1792395285": {
+      "model_id": "random_forest_1792395285",
+      "model_type": "random_forest",
+      "pipeline_id": "prep_binary_1792395283",
+      "dataset_id": "binary",
+      "artifact_file": "artifacts/random_forest_1792395285.joblib",
+      "training_time": 1.638,
+      "test_roc_auc": 0.8248,
+      "test_pr_auc": 0.4205,
+      "test_f1": 0.4454,
+      "test_recall": 0.779,
+      "test_precision": 0.3119,
+      "test_brier": 0.1732,
+      "inference_latency_ms": 0.0271,
+      "hyperparameters": {
+        "n_estimators": 80,
+        "max_depth": 10,
+        "random_state": 42
+      },
+      "created_at": 1792395285.208498,
+      "created_date": "2026-10-19 07:34:45 UTC"
+    },
+    "lightgbm_1792399076": {
+      "model_id": "lightgbm_1792399076",
+      "model_type": "lightgbm",
+      "pipeline_id": "prep_binary_1792399074",
+      "dataset_id": "binary",
+      "artifact_file": "artifacts/lightgbm_1792399076.joblib",
+      "training_time": 1.311,
+      "test_roc_auc": 0.8294,
+      "test_pr_auc": 0.4289,
+      "test_f1": 0.4446,
+      "test_recall": 0.7967,
+      "test_precision": 0.3083,
+      "test_brier": 0.1737,
+      "inference_latency_ms": 0.0076,
+      "hyperparameters": {
+        "n_estimators": 100,
+        "max_depth": 6,
+        "learning_rate": 0.1,
+        "balanced_weights": true,
+        "random_state": 42
+      },
+      "created_at": 1792399076.847502,
+      "created_date": "2026-10-19 08:37:56 UTC"
+    },
+    "logistic_regression_1792399513": {
+      "model_id": "logistic_regression_1792399513",
+      "model_type": "logistic_regression",
+      "pipeline_id": "prep_binary_1792399512",
+      "dataset_id": "binary",
+      "artifact_file": "artifacts/logistic_regression_1792399513.joblib",
+      "training_time": 0.141,
+      "test_roc_auc": 0.8216,
+      "test_pr_auc": 0.3964,
+      "test_f1": 0.4438,
+      "test_recall": 0.7633,
+      "test_precision": 0.3129,
+      "test_brier": 0.1764,
+      "inference_latency_ms": 0.0005,
+      "hyperparameters": {
+        "max_iter": 200,
+        "random_state": 42
+      },
+      "created_at": 1792399513.2685294,
+      "created_date": "2026-10-19 08:45:13 UTC"
+    }
+  }
+}
