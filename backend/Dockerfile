@@ -7,11 +7,11 @@ ENV PYTHONUNBUFFERED=1
 # Install system dependencies & OpenJDK for PySpark support
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
-    openjdk-17-jre-headless \
+    openjdk-21-jre \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+ENV JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
 ENV PATH="${JAVA_HOME}/bin:${PATH}"
 
 WORKDIR /app
